@@ -63,10 +63,13 @@ body
 
 .div1
 {
-    
+    width: 100%;
+    float: left;
+    text-align: left;
 }
 
 .div2
 {
-    
+    width: 50%px;
+    display: inline;
 }
