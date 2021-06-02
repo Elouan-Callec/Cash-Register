@@ -6,7 +6,6 @@ table
     font-size: 18px;
     line-height: 1.5;
     overflow: hidden;
-    position: relative;
     color: #595959;
     border-radius: 10px;
     margin: auto;
@@ -14,7 +13,6 @@ table
 
 td
 {
-    padding: 0;
     padding: 1% 1% 1% 1%;
 }
 
@@ -58,3 +56,17 @@ body
     background-color: #3ebeb5;
 }
 
+.container
+{
+    
+}
+
+.div1
+{
+    
+}
+
+.div2
+{
+    
+}
