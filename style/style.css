@@ -61,7 +61,7 @@ body{
 form
 {
     margin: 5% auto;
-    width: 650px;
+    width: 850px;
     padding: 1em;
     border: 1px solid black;
     border-radius: 1em;
@@ -116,8 +116,9 @@ h1, h2, h3
     border-color: #2a3449;
 }
 
-textarea
+label span
 {
-    vertical-align: top;
-    height: 5em;
+    display: inline-block;
+    width: 120px;
+    text-align: left;
 }
