@@ -9,70 +9,85 @@
 
 <body>
     <form method="POST" action="provisoire.php">
-        <h1>Ajout d'un nouvel utilisateur</h1>
+        <h1 class="border">Nouveau utilisateur</h1>
         <section>
-            <fieldset>
-                <legend>
-                    <h2>Surnom, nom et prénom</h2>
-                </legend>
+            <h3>Surnom, nom et prénom</h3>
 
-                <div>
-                    <label for="surnom">Surnom</label>
-                    <br />
-                    <input type="text" name="surnom" id="surnom" />
+            <div class="container">
+                <div class="left">
+                    <p>
+                        <label for="surnom">
+                            <span>Surnom</span>
+                        </label>
+                        <input type="text" name="surnom" id="surnom" class="case"/>
+                    </p>
                 </div>
-                <br />
-                <div>
-                    <label for="prenom">Prénom</label>
-                    <br />
-                    <input type="text" name="prenom" id="prenom">
+                <div class="center">
+                    <p>
+                        <label for="prenom">
+                            <span>Prénom</span>
+                        </label>
+                        <input type="text" name="prenom" id="prenom" class="case">
+                    </p>
                 </div>
-                <br />
-                <div>
-                    <label for="nom">Nom</label>
-                    <br />
-                    <input type="text" name="nom" id="nom">
+                <div class="right">
+                    <p>
+                        <label for="nom">
+                            <span>Nom</span>
+                        </label>
+                        <input type="text" name="nom" id="nom" class="case">
+                    </p>
                 </div>
-            </fieldset>
+            </div>
+        </section>
+
+        <br/>
+        <br/>
+        <br/>
+        <section>
+            <h3>Adresse</h3>
+
+            <p>
+                <label for="rue">
+                    <span>Rue</span>
+                </label>
+                <input type="text" name="rue" id="rue" class="case">
+            </p>
+            <p>
+                <label for="cp">
+                    <span>Code postal</span>
+                </label>
+                <input type="number" name="cp" id="cp" class="case">
+            </p>
+            <p>
+                <label for="ville">
+                    <span>Ville</span>
+                </label>
+                <input type="text" name="ville" id="ville" class="case">
+            </p>
         </section>
 
         <section>
-            <fieldset>
-                <legend>
-                    <h2>Adresse</h2>
-                </legend>
+            <h3>Coordonées</h3>
 
-                <label for="rue">Rue</label>
-                <input type="text" name="rue" id="rue">
-                <br />
-                <br />
-                <label for="cp">Code postal</label>
-                <input type="number" name="cp" id="cp">
-                <br />
-                <br />
-                <label for="ville">Ville</label>
-                <input type="text" name="ville" id="ville">
-            </fieldset>
-        </section>
-
-        <section>
-            <fieldset>
-                <legend>
-                    <h2>Coordonées</h2>
-                </legend>
-
-                <label for="email">E-mail : </label>
-                <input type="email" name="email" id="email">
-
-                <label for="tel">Téléphone : </label>
-                <input type="tel" name="tel" id="tel">
-            </fieldset>
+            <p>
+                <label for="email">
+                    <span>E-mail</span>
+                </label>
+                <input type="email" name="email" id="email" class="case">
+            </p>
+            <p>
+                <label for="tel">
+                    <span>Téléphone </span>
+                </label>
+                <input type="tel" name="tel" id="tel" class="case">
+            </p>
         </section>
 
         <section>
             <p>
-                <label for="groupeUtil">Groupe d'utilisateurs</label><br />
-                <select name="groupeUtil" id="groupeUtil">
+                <label for="groupeUtil">Groupe d'utilisateurs</label>
+                <select name="groupeUtil" id="groupeUtil" class="case">
                     <optgroup label="Abonné">
                         <option value="AdulteAboCommu">Adulte abonné commune</option>
                         <option value="AdulteAboHorsCommu">Adulte abonné hors commune</option>
@@ -91,11 +106,12 @@
                 </select>
             </p>
             <label for="solde">Solde</label>
-            <br />
-            <input type="text" name="solde" id="solde">
+
+            <input type="number" name="solde" id="solde" class="case">
         </section>
-        <br />
-        <button type="submit">Valider</button>
+        <div class="centre">
+            <button type="submit" size>Valider</button>
+        </div>
 
     </form>
 </body>

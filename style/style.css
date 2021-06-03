@@ -27,7 +27,6 @@ th
 
 caption
 {
-    color: #444d6c;
     background-color: #e8d272;
     font-weight: bold;
     font-size: 200%;
@@ -51,42 +50,74 @@ thead, tfoot
 
 body
 {
-    background-color: #3ebeb5;
-}
-
-.container
-{
-    
-}
-
-.div1
-{
-    width: 100%;
-    float: left;
-    text-align: left;
-}
-
-.div2
-{
-    width: 50%px;
-    display: inline;
-}
-
-.divForm1
-{
-    float: left;
-}
-
-.divForm2
-{
-    float: center;
-}
-
-.divForm3
-{
-    float: right;
+    background-color: #919fc4;
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    color: #404e6f;
+}
+
+form
+{
+    margin: 5% auto;
+    width: 650px;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+    background: linear-gradient(#a4e2fa, #8ec7de);
+    font-weight: 700;
+}
+
+.centre
+{
+    margin: 10px 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+h1, h2, h3
+{
+    color: #2a3449;
+}
+
+.container
+{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.left
+{
+    float: left;
+}
+
+.right
+{
+    float: left;
+}
+
+.center
+{
+    float: left;
+}
+
+.case
+{
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: #2a3449;
+    height: 20px;
+}
+
+.border
+{
+    border-bottom: 2px solid;
+    border-color: #2a3449;
+}
+
+textarea
+{
+    vertical-align: top;
+    height: 5em;
 }
