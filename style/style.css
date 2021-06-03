@@ -1,3 +1,10 @@
+body
+{
+    background-color: #919fc4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #404e6f;
+}
+
 table
 {
     border-collapse: collapse;
@@ -46,16 +53,6 @@ thead, tfoot
 .column2
 {
     background-color: #f0f0f0;
-}
-
-body
-{
-    background-color: #919fc4;
-}
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #404e6f;
 }
 
 form
