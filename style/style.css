@@ -2,7 +2,6 @@ table
 {
     border-collapse: collapse;
     width: 80%;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.5;
     overflow: hidden;
@@ -31,7 +30,6 @@ caption
     color: #444d6c;
     background-color: #e8d272;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 200%;
 }
 
@@ -72,4 +70,23 @@ body
 {
     width: 50%px;
     display: inline;
+}
+
+.divForm1
+{
+    float: left;
+}
+
+.divForm2
+{
+    float: center;
+}
+
+.divForm3
+{
+    float: right;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
 }

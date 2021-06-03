@@ -3,10 +3,93 @@
     <head>
         <meta charset="utf-8" />
         <link href="style/style.css" rel="stylesheet" type="text/css">
-        <title>Ajout Produit</title>
+        <title>Ajout Utilisateur</title>
     </head>
 
     <body>
-        <p>Ajout utilisateur</p>
+        <form method="POST" action="provisoire.php">
+            <h1>Ajout d'un nouvel utilisateur</h1>
+            <section>
+                <fieldset>
+                    <legend><h2>Surnom, nom et prénom</h2></legend>
+
+                    <div>
+                        <label for="surnom">Surnom</label>
+                        <br/>
+                        <input type="text" name="surnom" id="surnom"/>
+                    </div>
+                    <br/>
+                    <div>
+                        <label for="prenom">Prénom</label>
+                        <br/>
+                        <input type="text" name="prenom" id="prenom">
+                    </div>
+                    <br/>
+                    <div>
+                        <label for="nom">Nom</label>
+                        <br/>
+                        <input type="text" name="nom" id="nom">
+                    </div> 
+                </fieldset>
+            </section>
+
+            <section>
+                <fieldset>
+                    <legend><h2>Adresse</h2></legend>
+
+                    <label for="rue">Rue</label>
+                    <input type="text" name="rue" id="rue">
+                    <br/>
+                    <br/>
+                    <label for="cp">Code postal</label>
+                    <input type="number" name="cp" id="cp">
+                    <br/>
+                    <br/>
+                    <label for="ville">Ville</label>
+                    <input type="text" name="ville" id="ville">
+                </fieldset>
+            </section>
+            
+            <section>
+                <fieldset>
+                    <legend><h2>Coordonées</h2></legend>
+
+                    <label for="email">E-mail : </label>
+                    <input type="email" name="email" id="email">
+
+                    <label for="tel">Téléphone : </label>
+                    <input type="tel" name="tel" id="tel">
+                </fieldset>
+            </section>
+
+            <section>
+                <p>
+                    <label for="groupeUtil">Groupe d'utilisateurs</label><br/>
+                    <select name="groupeUtil" id="groupeUtil">
+                        <optgroup label="Abonné">
+                            <option value="AdulteAboCommu">Adulte abonné commune</option>
+                            <option value="AdulteAboHorsCommu">Adulte abonné hors commune</option>
+                        </optgroup>
+                        <optgroup label="Non abonné">
+                            <option value="AdulteNaCommu">Adulte non abonné commune</option>          
+                            <option value="AdulteNaCCPI">Adulte non abonné CCPI</option>
+                            <option value="AssoNaHorsCCPI">Adulte non abonné hors CCPI</option>
+                            <option value="JeuneNaCCPI">Jeune non abonné CCPI</option>
+                            <option value="JeuneNaHorsCCPI">Jeune non abonné hors CCPI</option>
+                            <option value="JeuneNaCommu">Jeune non abonné commune</option> 
+                        </optgroup>
+                        <optgroup label="Autre">
+                            <option value="Assoc">Association</option>
+                        </optgroup>  
+                    </select>
+                </p>
+                <label for="solde">Solde</label>
+                <br/>
+                <input type="text" name="solde" id="solde">
+            </section>
+            <br/>
+            <button type="submit">Valider</button>
+            
+        </form>
     </body>
 </html>
