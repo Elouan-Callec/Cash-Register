@@ -4,6 +4,8 @@ body{
     color: #404e6f;
 }
 
+/* Tableau */
+
 table{
     border-collapse: collapse;
     width: 80%;
@@ -45,6 +47,8 @@ thead, tfoot{
 .column2{
     background-color: #f0f0f0;
 }
+
+/* Formulaire */
 
 form{
     margin: 5% auto;
@@ -101,44 +105,7 @@ label span{
     text-align: left;
 }
 
-/*
-nav{
-    width: 100%;
-    margin: 0 auto;
-    background-color: white;
-    position: sticky;
-    top: 0px;
-}
-
-nav ul{
-    list-style-type: none;
-}
-
-nav li{
-    float: left;
-    width: 32.5%;
-    text-align: center;
-    border: 1px solid;
-}
-
-nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-nav a{
-    display: block;
-    text-decoration: none;
-    color: #404e6f;
-    border-bottom: 2px solid transparent;
-    padding: 0px 0px;
-}
-
-nav a:hover{
-    color: orange;
-}
-*/
+/* Barre de navigation */
 
 .navBar li{
     list-style: none;
@@ -148,6 +115,7 @@ nav a:hover{
 }
 
 .navBar span{
+    width: 0;
     left: 38px;
     padding: 0;
     position: absolute;
@@ -158,11 +126,73 @@ nav a:hover{
     letter-spacing: 0.6px;
     white-space: nowrap;
     line-height: 39px;
+    transition: 0.25s;
 }
 
 .navBar a{
+    background:url('img/navigation.jpg') no-repeat;
     height: 39px;
     width: 38px;
     display: block;
     position: relative;
+}
+
+.navBar a:hover span{
+    width: auto; padding: 0 20px; overflow: visible;
+}
+
+.navBar a:hover{
+    text-decoration: none;
+    box-shadow: 0 0 5px #9ddff5;
+}
+
+/* Bouton home */
+
+.navBar .home{
+    background-position: 0 0;
+    /*background: url('img/maison.jpg') ;*/
+}
+
+.navBar .home:hover{
+    background-position: 0px -39px;
+}
+
+.navBar .home span{
+    background-color: #7da315;
+    color: #3d4f0c;
+    text-shadow: 1px 1px 0 #99bf31;
+}
+
+/* Bouton releves */
+
+.navBar .releves{
+    background-position: -38px 0;
+    /*background: url('img/releves.jpg') ;*/
+}
+
+.navBar .releves:hover{
+    background-position: -38px -39px;
+}
+
+.navBar .releves span{
+    background-color:#1e8bb4;
+    color:#223a44;
+    text-shadow:1px 1px 0 #44a8d0;
+}
+
+/* Bouton rapports */
+
+.navBar .rapports{ 
+    background-position:-76px 0;
+    /*background: url('img/rapports.jpg') ;*/
+}
+
+.navBar .rapports:hover {
+     background-position:-76px -39px;
+}
+
+.navBar .rapports span{
+    background-color:#c86c1f;
+    color:#5a3517;
+    text-shadow:1px 1px 0 #d28344;
 }
