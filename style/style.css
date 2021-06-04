@@ -1,12 +1,10 @@
-body
-{
+body{
     background-color: #919fc4;
     font-family: Arial, Helvetica, sans-serif;
     color: #404e6f;
 }
 
-table
-{
+table{
     border-collapse: collapse;
     width: 80%;
     font-size: 18px;
@@ -14,49 +12,41 @@ table
     overflow: hidden;
     color: #595959;
     border-radius: 10px;
-    margin: auto;
+    margin: 20px auto;
 }
 
-td
-{
+td{
     padding: 1% 1% 1% 1%;
 }
 
-tr
-{
+tr{
     padding: 0;
 }
 
-th
-{
+th{
     padding: 1% 10% 1% 1%;
 }
 
-caption
-{
+caption{
     background-color: #e8d272;
     font-weight: bold;
     font-size: 200%;
 }
 
-thead, tfoot
-{
+thead, tfoot{
     background-color: #302e2e;
     color: white;
 }
 
-.column1
-{
+.column1{
     background-color: white;
 }
 
-.column2
-{
+.column2{
     background-color: #f0f0f0;
 }
 
-form
-{
+form{
     margin: 5% auto;
     width: 850px;
     padding: 1em;
@@ -66,56 +56,116 @@ form
     font-weight: 700;
 }
 
-.centre
-{
+.centre{
     margin: 10px 10px;
     padding: 10px;
     text-align: center;
 }
 
-h1, h2, h3
-{
+h1, h2, h3{
     color: #2a3449;
 }
 
-.container
-{
+.container{
     width: 100%;
     margin: 0 auto;
 }
 
-.left
-{
+.left{
     float: left;
 }
 
-.right
-{
+.right{
     float: left;
 }
 
-.center
-{
+.center{
     float: left;
 }
 
-.case
-{
+.case{
     border-radius: 4px;
     border: 1px solid;
     border-color: #2a3449;
     height: 20px;
 }
 
-.border
-{
+.border{
     border-bottom: 2px solid;
     border-color: #2a3449;
 }
 
-label span
-{
+label span{
     display: inline-block;
     width: 120px;
     text-align: left;
+}
+
+/*
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    float: left;
+    width: 32.5%;
+    text-align: center;
+    border: 1px solid;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: #404e6f;
+    border-bottom: 2px solid transparent;
+    padding: 0px 0px;
+}
+
+nav a:hover{
+    color: orange;
+}
+*/
+
+.navBar{
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.navBar li{
+    background-color: #f0f0f0;
+
+    border-right: 1px solid rgba(9, 9, 9, 0.125);
+
+    position: relative;
+    float: left;
+    list-style: none;
+}
+
+.navBar li:after{
+    content: '.';
+    
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
 }
