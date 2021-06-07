@@ -84,8 +84,8 @@ form{
 }
 
 .centre{
-    margin: 10px 10px;
-    padding: 10px;
+    margin: 1px 10px;
+    padding: 1px;
     text-align: center;
 }
 
@@ -124,7 +124,38 @@ label span{
     text-align: left;
 }
 
+/* Formulaire connexion */
 
+.title{
+    text-align: center;
+    font-size: 30px;
+}
+
+.formConnexion{
+    margin: 15% auto;
+    width: 350px;
+    background: linear-gradient(#a4e2fa, #8ec7de);
+    font-weight: 700;
+}
+
+.loginButton{
+    background: rgb(0, 162, 255);
+    color: white;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    width: 50%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.loginButton:hover{
+    background: rgb(0, 126, 199);
+}
 
 /* Barre de navigation */
 

@@ -8,26 +8,24 @@
 </head>
 
 <body>
-    <form method="POST" action="provisoire.php">
-        <h1>Login</h1>
-        <section>
-            <div>
-                <p>
-                    <label for="username">
-                        <span>Username</span>
-                    </label>
-                    <input type="text" name="username" id="username" class="case" />
-                </p>
-            </div>
-            <div>
-                <p>
-                    <label for="password">
-                        <span>Password</span>
-                    </label>
-                    <input type="text" name="password" id="password" class="case" />
-                </p>
-            </div>
-        </section>
+    <form method="POST" action="provisoire.php" class="formConnexion">
+        <p class="title">Login</p>
+        <div class="centre">
+            <p>
+                <label for="username"></label>
+                <input type="text" name="username" id="username" placeholder="Username" class="case" />
+            </p>
+        </div>
+        <div class="centre">
+            <p>
+                <label for="password"></label>
+                <input type="text" name="password" id="password" placeholder="Password" class="case" />
+            </p>
+        </div>
+        <br />
+        <div>
+            <button type="submit" class="loginButton">LOGIN</button>
+        </div>
     </form>
 </body>
 
