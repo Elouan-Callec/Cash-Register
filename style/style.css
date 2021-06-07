@@ -4,7 +4,15 @@ body{
     color: #404e6f;
 }
 
+h1, h2, h3{
+    color: #2a3449;
+}
+
+
+
 /* Tableau */
+
+
 
 table{
     border-collapse: collapse;
@@ -15,10 +23,16 @@ table{
     color: #595959;
     border-radius: 10px;
     margin: 20px auto;
+    table-layout: fixed;
+}
+
+.tableReleve{
+    table-layout: fixed;
 }
 
 td{
     padding: 1% 1% 1% 1%;
+    text-align: center;
 }
 
 tr{
@@ -26,7 +40,8 @@ tr{
 }
 
 th{
-    padding: 1% 10% 1% 1%;
+    padding: 1% 1% 1% 1px;
+    text-align: center;
 }
 
 caption{
@@ -40,6 +55,10 @@ thead, tfoot{
     color: white;
 }
 
+.column1:hover, .column2:hover{
+    background-color: #e2e2e2;
+}
+
 .column1{
     background-color: white;
 }
@@ -48,7 +67,11 @@ thead, tfoot{
     background-color: #f0f0f0;
 }
 
+
+
 /* Formulaire */
+
+
 
 form{
     margin: 5% auto;
@@ -64,10 +87,6 @@ form{
     margin: 10px 10px;
     padding: 10px;
     text-align: center;
-}
-
-h1, h2, h3{
-    color: #2a3449;
 }
 
 .container{
@@ -104,6 +123,8 @@ label span{
     width: 120px;
     text-align: left;
 }
+
+
 
 /* Barre de navigation */
 
@@ -148,7 +169,13 @@ label span{
     box-shadow: 0 0 5px #9ddff5;
 }
 
+
+nav{
+    position: sticky;
+}
+
 /* Bouton home */
+
 
 .navBar .home{
     background-position: 0 0;
@@ -165,7 +192,9 @@ label span{
     text-shadow: 1px 1px 0 #99bf31;
 }
 
+
 /* Bouton releves */
+
 
 .navBar .releves{
     background-position: -38px 0;
@@ -182,7 +211,9 @@ label span{
     text-shadow:1px 1px 0 #44a8d0;
 }
 
+
 /* Bouton rapports */
+
 
 .navBar .rapports{ 
     background-position:-76px 0;
@@ -194,6 +225,25 @@ label span{
 }
 
 .navBar .rapports span{
+    background-color:#c86c1f;
+    color:#5a3517;
+    text-shadow:1px 1px 0 #d28344;
+}
+
+
+/* Bouton deconnexion */
+
+
+.navBar .deconnexion{ 
+    background-position:-76px 0;
+    /*background: url('img/rapports.jpg') ;*/
+}
+
+.navBar .deconnexion:hover {
+     background-position:-76px -39px;
+}
+
+.navBar .deconnexion span{
     background-color:#c86c1f;
     color:#5a3517;
     text-shadow:1px 1px 0 #d28344;
