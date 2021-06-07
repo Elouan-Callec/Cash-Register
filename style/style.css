@@ -138,15 +138,20 @@ label span{
     font-weight: 700;
 }
 
-input[type=password], input[name="username"]{
-    background-image: url("img/password.png");
-    background-position-y: 1px;
+input[name="username"]{
+    background-image: url("img/user.png");
+    background-position-y: 2px;
+    background-position-x: 2px;
     padding-left: 25px;
     background-repeat: no-repeat;
 }
 
-input[name="username"]{
-    background-image: url("img/user.png");
+input[type=password]{
+    background-image: url("img/password.png");
+    background-position-y: 1px;
+    background-position-x: 1px;
+    padding-left: 25px;
+    background-repeat: no-repeat;
 }
 
 .loginButton{
