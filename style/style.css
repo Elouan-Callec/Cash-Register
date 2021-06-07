@@ -138,6 +138,17 @@ label span{
     font-weight: 700;
 }
 
+input[type=password], input[name="username"]{
+    background-image: url("img/password.png");
+    background-position-y: 1px;
+    padding-left: 25px;
+    background-repeat: no-repeat;
+}
+
+input[name="username"]{
+    background-image: url("img/user.png");
+}
+
 .loginButton{
     background: rgb(0, 162, 255);
     color: white;
