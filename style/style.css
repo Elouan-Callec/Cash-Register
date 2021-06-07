@@ -221,12 +221,11 @@ input[type=password]{
 
 
 .navBar .home{
-    background-position: 0 0;
-    /*background: url('img/maison.jpg') ;*/
+    background: url('img/home.png') no-repeat;
 }
 
 .navBar .home:hover{
-    background-position: 0px -39px;
+    
 }
 
 .navBar .home span{
