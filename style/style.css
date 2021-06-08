@@ -173,9 +173,17 @@ input[type=password]{
     background: rgb(0, 126, 199);
 }
 
+
+
 /* Barre de navigation */
 
 
+
+.navBar{
+    position: fixed;
+    top: 30%;
+    z-index: 1000;
+}
 
 .navBar li{
     list-style: none;
