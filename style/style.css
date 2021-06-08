@@ -200,7 +200,6 @@ input[type=password]{
 }
 
 .navBar a{
-    background:url('img/navigation.jpg') no-repeat;
     height: 39px;
     width: 38px;
     display: block;
@@ -221,25 +220,23 @@ input[type=password]{
 
 
 .navBar .home{
-    background:#7da315 url('img/home.png') no-repeat;
+    background:#ecf0f1 url('img/home.png') no-repeat;
     background-position-x: 3px;
     background-position-y: 3px;
-    width: 37px;
-    border: 0.5px solid #9ac91a;
+    width: 38px;
 }
 
 
 .navBar .home:hover{
-    background:#90bb19 url('img/home.png') no-repeat;
+    background: #f0f3f4 url('img/home.png') no-repeat;
     background-position-x: 3px;
     background-position-y: 3px;
-    width: 37px;
+    width: 38px;
 }
 
 .navBar .home span{
-    background-color: #7da315;
-    color: #3d4f0c;
-    text-shadow: 1px 1px 0 #99bf31;
+    background-color:#ecf0f1;
+    color:#7b7d7d;
 }
 
 
@@ -247,23 +244,22 @@ input[type=password]{
 
 
 .navBar .releves{
-    background:#1e8bb4 url('img/releve.png') no-repeat;
+    background:#f1c40f url('img/releve.png') no-repeat;
     background-position-x: 4px;
     background-position-y: 3px;
-    width: 37px;
+    width: 38px;
 }
 
 .navBar .releves:hover{
-    background:#25acdd url('img/releve.png') no-repeat;
+    background:#f4d03f  url('img/releve.png') no-repeat;
     background-position-x: 4px;
     background-position-y: 3px;
-    width: 37px;
+    width: 38px;
 }
 
 .navBar .releves span{
-    background-color:#1e8bb4;
-    color:#223a44;
-    text-shadow:1px 1px 0 #44a8d0;
+    background-color:#f1c40f;
+    color:#7d6608 ;
 }
 
 
@@ -271,23 +267,22 @@ input[type=password]{
 
 
 .navBar .rapports{ 
-    background:#c86c1f url('img/rapport2.png') no-repeat;
+    background:#3498db url('img/rapport2.png') no-repeat;
     background-position-x: 4px;
     background-position-y: 3px;
-    width: 37px;
+    width: 38px;
 }
 
 .navBar .rapports:hover {
-    background:#f08127 url('img/rapport2.png') no-repeat;
+    background:#5dade2 url('img/rapport2.png') no-repeat;
     background-position-x: 4px;
     background-position-y: 3px;
-    width: 37px;
+    width: 38px;
 }
 
 .navBar .rapports span{
-    background-color:#c86c1f;
-    color:#5a3517;
-    text-shadow:1px 1px 0 #d28344;
+    background-color:#3498db;
+    color:#1b4f72;
 }
 
 
@@ -295,21 +290,20 @@ input[type=password]{
 
 
 .navBar .deconnexion{ 
-    background:#d0a525 url('img/logout.png') no-repeat;
+    background:#e74c3c url('img/logout.png') no-repeat;
     background-position-x: 4px;
     background-position-y: 3px;
-    width: 37px;
+    width: 38px;
 }
 
 .navBar .deconnexion:hover {
-    background:#ebbb2a url('img/logout.png') no-repeat;
+    background:#ec7063 url('img/logout.png') no-repeat;
     background-position-x: 4px;
     background-position-y: 3px;
-    width: 37px;
+    width: 38px;
 }
 
 .navBar .deconnexion span{
-    background-color:#d0a525;
-    color:#604e18;
-    text-shadow:1px 1px 0 #d8b54b;
+    background-color:#cb4335;
+    color:#641e16;
 }
