@@ -44,12 +44,6 @@ th{
     text-align: center;
 }
 
-caption{
-    background-color: #e8d272;
-    font-weight: bold;
-    font-size: 200%;
-}
-
 thead, tfoot{
     background-color: #302e2e;
     color: white;
@@ -67,6 +61,27 @@ thead, tfoot{
     background-color: #f0f0f0;
 }
 
+/* Tableau details utilisateur */
+
+.tableDU{
+    border-collapse: collapse;
+    width: 80%;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow: hidden;
+    color: #595959;
+    border-radius: 10px;
+    margin: 0 auto;
+    table-layout: fixed;
+}
+
+.fontDU{
+    font-weight: bold;
+}
+
+td{
+    text-align: left;
+}
 
 
 /* Formulaire */
