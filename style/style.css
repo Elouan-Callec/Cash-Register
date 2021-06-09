@@ -8,6 +8,19 @@ h1, h2, h3{
     color: #2a3449;
 }
 
+.global{
+    overflow: auto;
+}
+
+.left{
+    float: left;
+    width: 90%;
+}
+
+.right{
+    overflow: auto;
+}
+
 /* Haut de page */
 
 .HP{
@@ -73,13 +86,17 @@ tr:nth-child(2n){
     background-color: #f0f0f0;
 }
 
+
 /* Tableau releve */
+
 
 .tableReleve{
     table-layout: fixed;
 }
 
+
 /* Tableau details utilisateur */
+
 
 .tableDU{
     border-collapse: collapse;
@@ -104,11 +121,11 @@ tr:nth-child(2n){
     font-weight: bold;
     font-size: 25px;
 }
-/*
+
 .buttonDU{
     text-align: right;
 }
-*/
+
 .fontDU{
     font-weight: bold;
 }
@@ -116,6 +133,12 @@ tr:nth-child(2n){
 .tableDU td{
     text-align: left;
 }
+
+.imgCaptionDU{
+    margin: 15px 30px;
+}
+
+
 
 /* Formulaire */
 
@@ -142,18 +165,6 @@ form{
     margin: 0 auto;
 }
 
-.left{
-    float: left;
-}
-
-.right{
-    float: left;
-}
-
-.center{
-    float: left;
-}
-
 .case{
     border-radius: 4px;
     border: 1px solid;
@@ -172,7 +183,25 @@ label span{
     text-align: left;
 }
 
+
+/* Ajout utilisateur */
+
+
+.leftUtil{
+    float: left;
+}
+
+.rightUtil{
+    float: left;
+}
+
+.centerUtil{
+    float: left;
+}
+
+
 /* Formulaire connexion */
+
 
 .titre{
     text-align: center;
