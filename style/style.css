@@ -8,6 +8,11 @@ h1, h2, h3{
     color: #2a3449;
 }
 
+/* Haut de page */
+
+.HP{
+    font-size: 18px;
+}
 
 
 /* Tableau */
@@ -26,10 +31,6 @@ table{
     table-layout: fixed;
 }
 
-.tableReleve{
-    table-layout: fixed;
-}
-
 td{
     padding: 1% 1% 1% 1%;
     text-align: center;
@@ -44,21 +45,31 @@ th{
     text-align: center;
 }
 
-thead, tfoot{
-    background-color: #302e2e;
-    color: white;
+/* tr pour le head et le foot du tableau */
+
+.trHF{
+    background-color: #302e2e !important;
+    color: white !important;
 }
 
-.column1:hover, .column2:hover{
+/* pour changer de couleur une ligne sur deux */
+
+tr:nth-child(2n+1):hover, tr:nth-child(2n):hover{
     background-color: #e2e2e2;
 }
 
-.column1{
+tr:nth-child(2n+1){
     background-color: white;
 }
 
-.column2{
+tr:nth-child(2n){
     background-color: #f0f0f0;
+}
+
+/* Tableau releve */
+
+.tableReleve{
+    table-layout: fixed;
 }
 
 /* Tableau details utilisateur */
@@ -79,7 +90,7 @@ thead, tfoot{
     font-weight: bold;
 }
 
-td{
+.tableDU:td{
     text-align: left;
 }
 
@@ -141,7 +152,7 @@ label span{
 
 /* Formulaire connexion */
 
-.title{
+.titre{
     text-align: center;
     font-size: 30px;
 }
