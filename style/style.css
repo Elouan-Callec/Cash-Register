@@ -16,7 +16,7 @@ h1, h2, h3{
     text-align: center;
     background-color:#e8d272;
     padding: 20px 0;
-    margin: 0px 190px;
+    margin: 0px 189px;
     border: 1px solid black;
 }
 
@@ -34,7 +34,7 @@ table{
     overflow: hidden;
     color: #595959;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 10px auto;
     table-layout: fixed;
 }
 
@@ -52,7 +52,7 @@ th{
     text-align: center;
 }
 
-/* tr pour le head et le foot du tableau */
+/* tr dans le head et foot du tableau */
 
 .trHF{
     background-color: #302e2e !important;
@@ -83,24 +83,39 @@ tr:nth-child(2n){
 
 .tableDU{
     border-collapse: collapse;
-    width: 80%;
+    width: 70%;
     font-size: 18px;
     line-height: 1.5;
     overflow: hidden;
     color: #595959;
-    border-radius: 10px;
-    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+    margin: 10px auto;
     table-layout: fixed;
 }
 
+.captionDU{
+    text-align: left;
+    padding: 0 20px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border-bottom-width: 5px;
+    border-radius: 10px 10px 0 0;
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+}
+/*
+.buttonDU{
+    text-align: right;
+}
+*/
 .fontDU{
     font-weight: bold;
 }
 
-.tableDU:td{
+.tableDU td{
     text-align: left;
 }
-
 
 /* Formulaire */
 
