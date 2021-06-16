@@ -24,18 +24,18 @@
                 </div>
                 <div class="centerUtil">
                     <p>
-                        <label for="prenom">
-                            <span>Prénom</span>
-                        </label>
-                        <input type="text" name="prenom" id="prenom" class="case">
-                    </p>
-                </div>
-                <div class="rightUtil">
-                    <p>
                         <label for="nom">
                             <span>Nom</span>
                         </label>
                         <input type="text" name="nom" id="nom" class="case">
+                    </p>
+                </div>
+                <div class="rightUtil">
+                    <p>
+                        <label for="prenom">
+                            <span>Prénom</span>
+                        </label>
+                        <input type="text" name="prenom" id="prenom" class="case">
                     </p>
                 </div>
             </div>
@@ -44,6 +44,35 @@
         <br />
         <br />
         <br />
+
+        <section>
+            <h3>Tarifs</h3>
+
+            <p>
+                <label for="territoire">Territoire</label>
+                <select name="territoire" id="territoire" class="case">
+                    <option value="HorsPlourin">Hors Plourin</option>
+                    <option value="Plourin">Plourin</option>
+                    <option value="HorsCCPI">Hors CCPI</option>
+                    <option value="CCPI">CCPI</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="abonnement">Abonnement</label>
+                <select name="abonnement" id="abonnement" class="case">
+                    <option value="NonAbonne">Non Abonné</option>
+                    <option value="Abonne">Abonné</option>
+                </select>
+            </p>
+            <label for="solde">
+                <span>Solde</span>
+            </label>
+            <input type="number" name="solde" id="solde" class="case">
+        </section>
+
+        <br />
+
         <section>
             <h3>Adresse</h3>
 
@@ -67,6 +96,8 @@
             </p>
         </section>
 
+        <br />
+
         <section>
             <h3>Coordonées</h3>
 
@@ -84,33 +115,6 @@
             </p>
         </section>
 
-        <br />
-        <section>
-            <p>
-                <label for="groupeUtil">Groupe d'utilisateurs</label>
-                <select name="groupeUtil" id="groupeUtil" class="case">
-                    <optgroup label="Abonné">
-                        <option value="AdulteAboCommu">Adulte abonné commune</option>
-                        <option value="AdulteAboHorsCommu">Adulte abonné hors commune</option>
-                    </optgroup>
-                    <optgroup label="Non abonné">
-                        <option value="AdulteNaCommu">Adulte non abonné commune</option>
-                        <option value="AdulteNaCCPI">Adulte non abonné CCPI</option>
-                        <option value="AssoNaHorsCCPI">Adulte non abonné hors CCPI</option>
-                        <option value="JeuneNaCCPI">Jeune non abonné CCPI</option>
-                        <option value="JeuneNaHorsCCPI">Jeune non abonné hors CCPI</option>
-                        <option value="JeuneNaCommu">Jeune non abonné commune</option>
-                    </optgroup>
-                    <optgroup label="Autre">
-                        <option value="Assoc">Association</option>
-                    </optgroup>
-                </select>
-            </p>
-            <label for="solde">
-                <span>Solde</span>
-            </label>
-            <input type="number" name="solde" id="solde" class="case">
-        </section>
         <div class="centre">
             <button type="submit">Valider</button>
         </div>
