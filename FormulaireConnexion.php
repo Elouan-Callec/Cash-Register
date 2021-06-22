@@ -28,7 +28,7 @@ $resultat = $req->fetch();
 
 
 if(isset($login, $password) AND $login === $resultat['admin_login'] AND $password === $resultat['admin_password']){
-    echo 'Connexion réussie !'.'<br/>';
+    echo "<meta http-equiv='refresh' content='0;url=index.html'>";
 }
 else{ 
     // aucun mot de passe entré ou mauvais mot de passe
