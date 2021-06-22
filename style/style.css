@@ -219,7 +219,7 @@ label span{
     font-weight: 700;
 }
 
-input[name="username"]{
+input[name="login"]{
     background-image: url("img/user.png");
     background-position-y: 2px;
     background-position-x: 2px;
