@@ -50,7 +50,7 @@ include "connexionBDD.php"
                 <tbody>
                     <?php
                     // récupération des données dans la BDD
-                    $req = $bdd->query('SELECT util_surnom, util_solde FROM utilisateurs ORDER BY util_solde LIMIT 10');
+                    $req = $bdd->query('SELECT util_surnom, util_solde FROM utilisateurs ORDER BY util_surnom');
 
                     while($donnees = $req->fetch()){
                     ?>
@@ -63,25 +63,7 @@ include "connexionBDD.php"
                     </tr>
                     <?php
                       }
-                    ?>
-
-
-
-                    <tr>
-                        <td>ecallec</td>
-                        <td>10€</td>
-                        <td><a href="DetailsUtilisateur.php"><img src="style/img/detailsUser.png"></td>
-                        <td><a href="AjoutProduit.php"><img src="style/img/addProduit.png"></td>
-                        <td><a href="AjoutCrédits.html"><img src="style/img/addCredits.png"></td>
-                    </tr>
-                    <tr>
-                        <td>test Surnom</td>
-                        <td>test Solde</td>
-                        <td><a href="DetailsUtilisateur.php"><img src="style/img/detailsUser.png"></td>
-                        <td><a href="AjoutProduit.php"><img src="style/img/addProduit.png"></td>
-                        <td><a href="AjoutCrédits.html"><img src="style/img/addCredits.png"></td>
-                    </tr>
-                    
+                    ?>                    
                 </tbody>
             </table>
         </div>
