@@ -12,32 +12,9 @@
         <p class="HP">Relevés</p>
     </div>
 
-    <div>
-        <nav>
-            <ul class="navBar">
-                <li>
-                    <a class="home" href="index.html">
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="releves" href="releve.html">
-                        <span>Relevés</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="rapports" href="#">
-                        <span>Rapports</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="deconnexion" href="FormulaireConnexion.html">
-                        <span>Deconnexion</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <?php
+    include "NavBar.html"
+    ?>
 
     <div>
         <div>

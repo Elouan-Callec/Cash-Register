@@ -28,12 +28,13 @@ $resultat = $req->fetch();
 
 
 if(isset($login, $password) AND $login === $resultat['admin_login'] AND $password === $resultat['admin_password']){
+    // redirection vers la page principal
     echo "<meta http-equiv='refresh' content='0;url=index.html'>";
 }
 else{ 
-    // aucun mot de passe entré ou mauvais mot de passe
+    // message d'erreur et réaffichage du formulaire
     echo 'Mauvais identifiant ou mot de passe !';
-
+    
 ?>
 
    <form method="POST" action="FormulaireConnexion.php" class="formConnexion">

@@ -12,32 +12,10 @@
         <p class="HP">Détails utilisateur</p>
     </div>
 
-    <div>
-        <nav>
-            <ul class="navBar">
-                <li>
-                    <a class="home" href="index.html">
-                        <span>Accueil</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="releves" href="releve.html">
-                        <span>Relevés</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="rapports" href="#">
-                        <span>Rapports</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="deconnexion" href="FormulaireConnexion.html">
-                        <span>Déconnexion</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <?php
+    include "NavBar.html"
+    ?>
+    
     <div>
         <div>
 
@@ -85,17 +63,18 @@
                         <td>07 86 67 59 39</td>
                     </tr>
                     <tr>
-                        <td class="fontDU">Groupe d'utilisateur</td>
-                        <td>?</td>
+                        <td class="fontDU">Territoire</td>
+                        <td>Hors CCPI</td>
+                    </tr>
+                    <tr>
+                        <td class="fontDU">Abonnement</td>
+                        <td>Non Abonné</td>
                     </tr>
                     <tr>
                         <td class="fontDU">Solde</td>
                         <td>10€</td>
                     </tr>
-                    <tr>
-                        <td class="fontDU">Abonnement utilisateur</td>
-                        <td>?</td>
-                    </tr>
+                    
                     <tr>
                         <td class="fontDU">Historique des actions</td>
                         <td><a href="#"><img src="style/img/historique.png" class="imgTabDU"></td>
