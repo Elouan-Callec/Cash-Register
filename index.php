@@ -17,8 +17,9 @@ include "connexionBDD.php"
         <p class="HP">Informations utilisateur</p>
     </div>
 
+    <!-- Ajout de la barre de navigation -->
     <?php
-    include "NavBar.html"
+    include "NavBar.html";
     ?>
 
     <div>
@@ -47,6 +48,25 @@ include "connexionBDD.php"
                 </tfoot>
 
                 <tbody>
+                    <?php
+                    // récupération des données dans la BDD
+                    $req = $bdd->query('SELECT util_surnom, util_solde FROM utilisateurs ORDER BY util_solde LIMIT 10');
+
+                    while($donnees = $req->fetch()){
+                    ?>
+                    <tr>
+                        <td><?php echo $donnees['util_surnom']; ?></td>
+                        <td><?php echo $donnees['util_solde']."€"; ?></td>
+                        <td><a href="DetailsUtilisateur.php"><img src="style/img/detailsUser.png"></td>
+                        <td><a href="AjoutProduit.php"><img src="style/img/addProduit.png"></td>
+                        <td><a href="AjoutCrédits.html"><img src="style/img/addCredits.png"></td>
+                    </tr>
+                    <?php
+                      }
+                    ?>
+
+
+
                     <tr>
                         <td>ecallec</td>
                         <td>10€</td>
