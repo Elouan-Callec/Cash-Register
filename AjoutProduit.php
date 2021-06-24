@@ -15,11 +15,23 @@ include "connexionBDD.php"
 <body>
 
     <?php
-    // Récupération des données dans la BDD
-    $req = $bdd->query('SELECT prod_nom, prox_prix FROM produits');
+    // Verrifie si on récupère bien le surnom
+    if(isset($_GET['surnom'])){
+        $surnom = $_GET['surnom'];
+    }
+    // Redirection vers la page principal si non
+    else{
+        echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+    }
 
-    while($donnees = $req->fetch()){
+    // Récupération du territoire et de l'abonnement de l'utilisateur
+    $req = $bdd->query("SELECT util_territoire, util_abonnement FROM utilisateurs WHERE util_surnom = '$surnom'");
+    $donnees = $req->fetch();
+
+    $territoire = $donnees['util_territoire'];
+    $abonnement = $donnees['util_abonnement'];
     ?>
+
     <div>
         <!-- Partie gauche de la page -->
         <div>
@@ -28,12 +40,8 @@ include "connexionBDD.php"
                     <label for="motif">Motif</label>
                     <select name="motif" id="motif" class="case">
                         <optgroup label="Temps">
-                            <option value="1/4h Plourin">1/4h Plourin</option>
-                            <option value="1/4h abonné Plourin">1/4h abonné Plourin</option>
-                            <option value="1/4h abonné hors Plourin">1/4h abonné hors Plourin</option>
-                            <option value="1/4h CCPI">1/4h CCPI</option>
-                            <option value="1/4h hors-CCPI">1/4h hors-CCPI</option>
-                            <option value="1h jeunes">1h jeunes</option>
+                            <option value="1/4h Plourin">1/4h</option><?php ?>
+                            <option value="1h Jeune">1h Jeune</option>
                         </optgroup>
                         <optgroup label="Copieur">
                             <option value="A3 Couleur">A3 Couleur</option>
@@ -59,9 +67,8 @@ include "connexionBDD.php"
                         <optgroup label="Cycles">
                             <option value="Cycle initiation Plourin">Cycle initiation Plourin</option>
                             <option value="Cycle Hors Plourin">Cycle Hors Plourin</option>
+                            <option value="Cycle perfectionnement Hors Plourin">Cycle perfectionnement Hors Plourin</option>
                             <option value="Cycle perfectionnement Plourin">Cycle perfectionnement Plourin</option>
-                            <option value="Cycle perfectionnement Hors Plourin">Cycle perfectionnement Hors Plourin
-                            </option>
                         </optgroup>
                         <optgroup label="Adhésion Clubs">
                             <option value="Fablab">Fablab</option>
@@ -150,15 +157,16 @@ include "connexionBDD.php"
         </div>
 
         <!-- Partie droite de la page -->
-
         <div action="AjoutProduit.php" method="post">
             <form>
                 <p>
                     Récapitulatif :</br>
                     <?php
+
+                    // Récupération des données du formulaire
                     if(isset($_POST['motif'])){
-                        $motif = $_POST['motif'];
-                        echo 'Motif de payement : '.$motif.'<br/>';
+                        $motifPayement = $_POST['motif'];
+                        echo 'Motif de payement : '.$motifPayement.'<br/>';
                     }
                     if(isset($_POST['typePayement'])){
                         $typePayement = $_POST['typePayement'];
@@ -168,17 +176,36 @@ include "connexionBDD.php"
                         $quantite = $_POST['quantite'];
                         echo 'Quantité : '.$quantite.'<br/>';
                     }
-                    $prix = $quantite * $typePayement;
+
+
+                    if($produit == "1/4h"){
+                        $reqProdPrix = $bdd->prepare(
+                            "SELECT prod_prix FROM produits
+                            INNER JOIN utilisateurs
+                            ON produits.util_territoire = utilisateurs.util_territoire
+                            WHERE produits.util_abonnement = utilisateurs.util_abonnement AND utilisateurs.util_surnom = '$surnom'"
+                        );
+                    }
+                    else{
+                        $reqProdPrix = $bdd->prepare(
+                            "SELECT prod_prix FROM produits
+                            INNER JOIN utilisateurs
+                            ON produits.util_abonnement = utilisateurs.util_abonnement
+                            WHERE prod_nom = '$motifPayement' AND utilisateurs.util_surnom = '$surnom'"
+                        );
+                    }                    
                     
+                    $prixTotal = $reqProdPrix * $quantite;
+
+                    echo "Prix total : ".$prixTotal;
+                    
+
                     ?>
                 </p>
             </form>
         </div>
 
     </div>
-    <?php
-    }
-    ?>
 </body>
 
 </html>
