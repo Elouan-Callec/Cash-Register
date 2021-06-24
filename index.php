@@ -57,6 +57,7 @@ include "connexionBDD.php"
                     <tr>
                         <td><?php echo $donnees['util_surnom']; ?></td>
                         <td><?php echo $donnees['util_solde']."€"; ?></td>
+                        <!-- Envoie du surnom de l'utilisateur choisi à la page DetailsUtilisateur -->
                         <td><a href="DetailsUtilisateur.php?surnom=<?php echo $donnees['util_surnom'];?>"><img src="style/img/detailsUser.png"></td>
                         <td><a href="AjoutProduit.php"><img src="style/img/addProduit.png"></td>
                         <td><a href="AjoutCrédits.html"><img src="style/img/addCredits.png"></td>
