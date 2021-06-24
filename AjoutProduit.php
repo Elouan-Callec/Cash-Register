@@ -1,3 +1,8 @@
+<!-- Connexion a la base de donnees -->
+<?php
+include "connexionBDD.php"
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -8,10 +13,15 @@
 </head>
 
 <body>
+
+    <?php
+    // Récupération des données dans la BDD
+    $req = $bdd->query('SELECT prod_nom, prox_prix FROM produits');
+
+    while($donnees = $req->fetch()){
+    ?>
     <div>
-
         <!-- Partie gauche de la page -->
-
         <div>
             <form action="AjoutProduit.php" method="post">
                 <p>
@@ -166,6 +176,9 @@
         </div>
 
     </div>
+    <?php
+    }
+    ?>
 </body>
 
 </html>

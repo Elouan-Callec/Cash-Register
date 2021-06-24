@@ -51,15 +51,17 @@ include "connexionBDD.php"
                 <tbody>
                     <?php
                     // Récupération des données dans la BDD
-                    $req = $bdd->query('SELECT util_id, util_surnom, util_solde FROM utilisateurs ORDER BY util_surnom');
+                    $req = $bdd->query('SELECT util_surnom, util_solde FROM utilisateurs ORDER BY util_surnom');
 
                     while($donnees = $req->fetch()){
+                        $surnomUtilisateur = $donnees['util_surnom'];
+                        $soldeUtilisateur = $donnees['util_solde'];
                     ?>
                     <tr>
-                        <td><?php echo $donnees['util_surnom']; ?></td>
-                        <td><?php echo $donnees['util_solde']."€"; ?></td>
+                        <td><?php echo $surnomUtilisateur; ?></td>
+                        <td><?php echo $soldeUtilisateur."€"; ?></td>
                         <!-- Envoie du surnom de l'utilisateur choisi à la page DetailsUtilisateur -->
-                        <td><a href="DetailsUtilisateur.php?surnom=<?php echo $donnees['util_surnom'];?>"><img src="style/img/detailsUser.png"></td>
+                        <td><a href="DetailsUtilisateur.php?surnom=<?php echo $surnomUtilisateur;?>"><img src="style/img/detailsUser.png"></td>
                         <td><a href="AjoutProduit.php"><img src="style/img/addProduit.png"></td>
                         <td><a href="AjoutCrédits.html"><img src="style/img/addCredits.png"></td>
                     </tr>

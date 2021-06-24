@@ -1,3 +1,8 @@
+<!-- Connexion a la base de donnees -->
+<?php
+include "connexionBDD.php"
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -12,10 +17,12 @@
         <p class="HP">Relevés</p>
     </div>
 
+    <!-- Ajout de la barre de navigation -->
     <?php
     include "NavBar.html"
     ?>
 
+    <!-- Création du tableau -->
     <div>
         <div>
             <table class="tableReleve">
@@ -38,6 +45,12 @@
                 </tfoot>
 
                 <tbody>
+                    <?php
+                    // Récupération des données dans la BDD
+                    $req = $bdd->query('SELECT util_id, util_surnom, util_solde FROM utilisateurs ORDER BY util_surnom');
+
+                    while($donnees = $req->fetch()){
+                    ?>
                     <tr>
                         <td>6</td>
                         <td>09/06/2021 15:42</td>

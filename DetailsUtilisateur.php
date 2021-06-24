@@ -49,7 +49,6 @@ include "connexionBDD.php"
     include "NavBar.html";
     ?>
     
-
     <!-- Création du tableau -->
     <div>
         <div>
