@@ -30,7 +30,7 @@ include "connexionBDD.php"
 
     $prenom = $donnees['util_prenom'];
     $nom = $donnees['util_nom'];
-    $adresse = $donnees['util_adresse'];
+    $rue = $donnees['util_rue'];
     $codePostal = $donnees['util_cp'];
     $ville = $donnees['util_ville'];
     $mail = $donnees['util_email'];
@@ -76,8 +76,8 @@ include "connexionBDD.php"
                         <td><?php echo $nom;?></td>
                     </tr>
                     <tr>
-                        <td class="fontDU">Adresse</td>
-                        <td><?php echo $adresse;?></td>
+                        <td class="fontDU">Rue</td>
+                        <td><?php echo $rue;?></td>
                     </tr>
                     <tr>
                         <td class="fontDU">Code postal</td>
