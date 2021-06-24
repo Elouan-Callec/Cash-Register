@@ -49,7 +49,7 @@ include "connexionBDD.php"
 
                 <tbody>
                     <?php
-                    // récupération des données dans la BDD
+                    // Récupération des données dans la BDD
                     $req = $bdd->query('SELECT util_id, util_surnom, util_solde FROM utilisateurs ORDER BY util_surnom');
 
                     while($donnees = $req->fetch()){

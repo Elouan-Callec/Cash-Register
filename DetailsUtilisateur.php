@@ -15,13 +15,16 @@ include "connexionBDD.php"
 <body>
 
     <?php
+    // Verrifie si on récupère bien le surnom
     if(isset($_GET['surnom'])){
         $surnom = $_GET['surnom'];
     }
+    // Redirection vers la page principal si non
     else{
-        echo "aucun utilisateur choisi";
+        echo "<meta http-equiv='refresh' content='0;url=index.php'>";
     }
     
+    // Récupération des données sur l'utilisateur
     $req = $bdd->query("SELECT * FROM utilisateurs WHERE util_surnom = '$surnom'");
     $donnees = $req->fetch();
 
@@ -42,6 +45,7 @@ include "connexionBDD.php"
         <p class="HP">Détails utilisateur</p>
     </div>
 
+    <!-- Ajout de la barre de navigation -->
     <?php
     include "NavBar.html";
     ?>
@@ -55,7 +59,8 @@ include "connexionBDD.php"
                             <p class="left"><?php echo $surnom; ?></p>
                         </div>
                         <div>
-                            <a href="UpdateDetailsUtilisateur.html" class="right"><img src="style/img/update.png" class="imgCaptionDU"></a>
+                            <!-- Envoie du surnom de l'utilisateur choisi à la page UpdateDetailsUtilisateur -->
+                            <a href="UpdateDetailsUtilisateur.html?surnom=<?php echo $surnom;?>" class="right"><img src="style/img/update.png" class="imgCaptionDU"></a>
                         </div>
                     </div>
                 </caption>
