@@ -16,6 +16,14 @@ include "connexionBDD.php"
 
 <?php
 
+if (isset($_GET['util_id'])){
+    $util_id = $_GET['util_id']));
+    echo 'utilisateur choisi !';
+}
+else{
+    echo "aucun utilisateur choisi";
+}
+
 // récupération du login et password du formulaire
 $login = $_POST['login'];
 $password =$_POST['password'];

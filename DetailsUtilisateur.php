@@ -1,3 +1,8 @@
+<!-- Connexion a la base de donnees -->
+<?php
+include "connexionBDD.php"
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -8,24 +13,46 @@
 </head>
 
 <body>
+
+    <?php
+    if(isset($_GET['surnom'])){
+        $surnom = $_GET['surnom'];
+    }
+    else{
+        echo "aucun utilisateur choisi";
+    }
+    
+    $req = $bdd->query("SELECT * FROM utilisateurs WHERE util_surnom = '$surnom'");
+    $donnees = $req->fetch();
+
+    $prenom = $donnees['util_prenom'];
+    $nom = $donnees['util_nom'];
+    $adresse = $donnees['util_adresse'];
+    $codePostal = $donnees['util_cp'];
+    $ville = $donnees['util_ville'];
+    $mail = $donnees['util_email'];
+    $telephone = $donnees['util_telephone'];
+    $territoire = $donnees['util_territoire'];
+    $abonnement = $donnees['util_abonnement'];
+    $solde = $donnees['util_solde'];
+    ?>
+
+
     <div>
         <p class="HP">Détails utilisateur</p>
     </div>
 
     <?php
-    include "NavBar.html"
+    include "NavBar.html";
     ?>
     
     <div>
-        <div>
-
-        </div>
         <div>
             <table class="tableDU">
                 <caption class="captionDU">
                     <div class="global">
                         <div>
-                            <p class="left">ecallec</p>
+                            <p class="left"><?php echo $surnom; ?></p>
                         </div>
                         <div>
                             <a href="UpdateDetailsUtilisateur.html" class="right"><img src="style/img/update.png" class="imgCaptionDU"></a>
@@ -36,43 +63,43 @@
                 <tbody>
                     <tr>
                         <td class="fontDU">Prénom</td>
-                        <td>Elouan</td>
+                        <td><?php echo $prenom; ?></td>
                     </tr>
                     <tr>
                         <td class="fontDU">Nom</td>
-                        <td>Callec</td>
+                        <td><?php echo $nom;?></td>
                     </tr>
                     <tr>
                         <td class="fontDU">Adresse</td>
-                        <td>14 Hameaux de keruscat</td>
+                        <td><?php echo $adresse;?></td>
                     </tr>
                     <tr>
                         <td class="fontDU">Code postal</td>
-                        <td>29 830</td>
+                        <td><?php echo $codePostal;?></td>
                     </tr>
                     <tr>
                         <td class="fontDU">Ville</td>
-                        <td>Ploudalmézeau</td>
+                        <td><?php echo $ville;?></td>
                     </tr>
                     <tr>
                         <td class="fontDU">E-mail</td>
-                        <td>callec.elouan29@gmail.com</td>
+                        <td><?php echo $mail;?></td>
                     </tr>
                     <tr>
                         <td class="fontDU">Téléphone</td>
-                        <td>07 86 67 59 39</td>
+                        <td><?php echo $telephone;?></td>
                     </tr>
                     <tr>
                         <td class="fontDU">Territoire</td>
-                        <td>Hors CCPI</td>
+                        <td><?php echo $territoire;?></td>
                     </tr>
                     <tr>
                         <td class="fontDU">Abonnement</td>
-                        <td>Non Abonné</td>
+                        <td><?php echo $abonnement;?></td>
                     </tr>
                     <tr>
                         <td class="fontDU">Solde</td>
-                        <td>10€</td>
+                        <td><?php echo $solde;?></td>
                     </tr>
                     
                     <tr>
