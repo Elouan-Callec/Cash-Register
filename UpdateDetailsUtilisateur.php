@@ -1,3 +1,8 @@
+<!-- Connexion a la base de donnees -->
+<?php
+include "connexionBDD.php"
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -8,6 +13,34 @@
 </head>
 
 <body>
+
+    <?php
+    // Verrifie si on récupère bien le surnom
+    if(isset($_GET['surnom'])){
+        $surnom = $_GET['surnom'];
+    }
+    // Redirection vers la page principal si non
+    else{
+        echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+    }
+
+    // Récupération des données sur l'utilisateur
+    $req = $bdd->query("SELECT * FROM utilisateurs WHERE util_surnom = '$surnom'");
+    $donnees = $req->fetch();
+
+    $prenom = $donnees['util_prenom'];
+    $nom = $donnees['util_nom'];
+    $adresse = $donnees['util_adresse'];
+    $codePostal = $donnees['util_cp'];
+    $ville = $donnees['util_ville'];
+    $mail = $donnees['util_email'];
+    $telephone = $donnees['util_telephone'];
+    $territoire = $donnees['util_territoire'];
+    $abonnement = $donnees['util_abonnement'];
+    $solde = $donnees['util_solde'];
+    ?>
+
+    <!-- Création du formulaire -->
     <form method="POST" action="provisoire.php">
         <h1 class="border">Modification utilisateur</h1>
         <section>

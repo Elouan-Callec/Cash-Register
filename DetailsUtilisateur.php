@@ -40,7 +40,6 @@ include "connexionBDD.php"
     $solde = $donnees['util_solde'];
     ?>
 
-
     <div>
         <p class="HP">Détails utilisateur</p>
     </div>
@@ -50,6 +49,8 @@ include "connexionBDD.php"
     include "NavBar.html";
     ?>
     
+
+    <!-- Création du tableau -->
     <div>
         <div>
             <table class="tableDU">
@@ -60,7 +61,7 @@ include "connexionBDD.php"
                         </div>
                         <div>
                             <!-- Envoie du surnom de l'utilisateur choisi à la page UpdateDetailsUtilisateur -->
-                            <a href="UpdateDetailsUtilisateur.html?surnom=<?php echo $surnom;?>" class="right"><img src="style/img/update.png" class="imgCaptionDU"></a>
+                            <a href="UpdateDetailsUtilisateur.php?surnom=<?php echo $surnom;?>" class="right"><img src="style/img/update.png" class="imgCaptionDU"></a>
                         </div>
                     </div>
                 </caption>
