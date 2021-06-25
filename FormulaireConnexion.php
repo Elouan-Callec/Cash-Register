@@ -16,28 +16,28 @@ include "connexionBDD.php"
 
 <?php
 
-if (isset($_GET['util_id'])){
-    $util_id = $_GET['util_id'];
-    echo 'utilisateur choisi !';
+// récupération du login et password du formulaire
+if(isset($_POST['login'])){
+    $login = $_POST['login'];
 }
-else{
-    echo "aucun utilisateur choisi";
+if(isset($_POST['password'])){
+    $password =$_POST['password'];
 }
 
-// récupération du login et password du formulaire
-$login = $_POST['login'];
-$password =$_POST['password'];
 
 // requête pour rechercher le login et password de l'admin
-$req = $bdd->prepare('SELECT admin_login, admin_password, admin_prenom FROM administrateurs WHERE admin_login = :login');
-$req->execute(array(
-    'login' => $login));
-$resultat = $req->fetch();
+if(isset($login) AND isset($password)){
+    $req = $bdd->prepare('SELECT admin_login, admin_password, admin_prenom FROM administrateurs WHERE admin_login = :login');
+    $req->execute(array(
+        'login' => $login));
+    $resultat = $req->fetch();
+}
+
 
 
 if(isset($login, $password) AND $login === $resultat['admin_login'] AND $password === $resultat['admin_password']){
     // redirection vers la page principal
-    echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+    echo "<meta http-equiv='refresh' content='0; url=index.php'>";
 }
 else{ 
     // message d'erreur et réaffichage du formulaire
