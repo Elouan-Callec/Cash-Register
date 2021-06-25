@@ -23,7 +23,7 @@ include "connexionBDD.php"
     else{
         echo "<meta http-equiv='refresh' content='0;url=index.php'>";
     }
-
+    
     // Récupération du territoire et de l'abonnement de l'utilisateur
     $req = $bdd->query("SELECT util_territoire, util_abonnement FROM utilisateurs WHERE util_surnom = '$surnom'");
     $donnees = $req->fetch();
@@ -35,7 +35,7 @@ include "connexionBDD.php"
     <div>
         <!-- Partie gauche de la page -->
         <div>
-            <form action="AjoutProduit.php" method="post">
+            <form action="AjoutProduit.php?surnom=<?php echo $surnom;?>" method="post">
                 <p>
                     <label for="motif">Motif</label>
                     <select name="motif" id="motif" class="case">
@@ -161,6 +161,7 @@ include "connexionBDD.php"
             <form>
                 <p>
                     Récapitulatif :</br>
+                    <br/>
                     <?php
 
                     // Récupération des données du formulaire
@@ -177,30 +178,38 @@ include "connexionBDD.php"
                         echo 'Quantité : '.$quantite.'<br/>';
                     }
 
-
-                    if($produit == "1/4h"){
-                        $reqProdPrix = $bdd->prepare(
+                    
+                    if($motifPayement == "1/4h"){
+                        $reqPrixProduit = $bdd->query(
                             "SELECT prod_prix FROM produits
                             INNER JOIN utilisateurs
                             ON produits.util_territoire = utilisateurs.util_territoire
-                            WHERE produits.util_abonnement = utilisateurs.util_abonnement AND utilisateurs.util_surnom = '$surnom'"
+                            WHERE produits.util_abonnement = utilisateurs.util_abonnement AND utilisateurs.util_surnom = '$surnom' AND produits.prod_nom = '1/4h';"
                         );
+                        $donneesPrixProduit = $reqPrixProduit->fetch();
                     }
                     else{
-                        $reqProdPrix = $bdd->prepare(
+                        $reqPrixProduit = $bdd->query(
                             "SELECT prod_prix FROM produits
                             INNER JOIN utilisateurs
                             ON produits.util_abonnement = utilisateurs.util_abonnement
-                            WHERE prod_nom = '$motifPayement' AND utilisateurs.util_surnom = '$surnom'"
+                            WHERE prod_nom = '$motifPayement' AND utilisateurs.util_surnom = '$surnom';"
                         );
-                    }                    
-                    
-                    $prixTotal = $reqProdPrix * $quantite;
+                        $donneesPrixProduit = $reqPrixProduit->fetch();
+                    }    
+                           
+                    $prixProduit = $donneesPrixProduit['prod_prix'];
+                    echo "Prix du produit : ".$prixProduit."<br/>";
 
-                    echo "Prix total : ".$prixTotal;
-                    
+                    $prixFinal = $prixProduit * $quantite;
 
+                    echo "Prix total : ".$prixFinal;
                     ?>
+                </p>
+                <p>
+                <div class="centre">
+                    <button type="submit">Valider</button>
+                </div>
                 </p>
             </form>
         </div>
