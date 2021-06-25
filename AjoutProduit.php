@@ -156,40 +156,44 @@ include "connexionBDD.php"
             </form>
         </div>
 
+
         <!-- Partie droite de la page -->
+        
+        <?php
+        // Récupération des données du formulaire
+        if(isset($_POST['motif'])){
+        ?>
+
         <div action="AjoutProduit.php" method="post">
             <form>
                 <p>
                     Récapitulatif :</br>
-                    <br/>
+                    <br/>    
+
                     <?php
+                    $motifPayement = $_POST['motif'];
+                    echo 'Motif de payement : '.$motifPayement.'<br/>';
 
-                    // Récupération des données du formulaire
-                    if(isset($_POST['motif'])){
-                        $motifPayement = $_POST['motif'];
-                        echo 'Motif de payement : '.$motifPayement.'<br/>';
-
-                        // Récupération du prix en fonction du motif de payement
-                        if($motifPayement == "1/4h"){
-                            $reqPrixProduit = $bdd->query(
-                                "SELECT prod_prix FROM produits
-                                INNER JOIN utilisateurs
-                                ON produits.util_territoire = utilisateurs.util_territoire
-                                WHERE produits.util_abonnement = utilisateurs.util_abonnement AND utilisateurs.util_surnom = '$surnom' AND produits.prod_nom = '1/4h';"
-                            );
-                            $donneesPrixProduit = $reqPrixProduit->fetch();
-                        }
-                        else{
-                            $reqPrixProduit = $bdd->query(
-                                "SELECT prod_prix FROM produits
-                                INNER JOIN utilisateurs
-                                ON produits.util_abonnement = utilisateurs.util_abonnement
-                                WHERE prod_nom = '$motifPayement' AND utilisateurs.util_surnom = '$surnom';"
-                            );
-                            $donneesPrixProduit = $reqPrixProduit->fetch();
-                        } 
+                    // Récupération du prix en fonction du motif de payement
+                    if($motifPayement == "1/4h"){
+                        $reqPrixProduit = $bdd->query(
+                            "SELECT prod_prix FROM produits
+                            INNER JOIN utilisateurs
+                            ON produits.util_territoire = utilisateurs.util_territoire
+                            WHERE produits.util_abonnement = utilisateurs.util_abonnement AND utilisateurs.util_surnom = '$surnom' AND produits.prod_nom = '1/4h';"
+                        );
+                        $donneesPrixProduit = $reqPrixProduit->fetch();
                     }
-
+                    else{
+                        $reqPrixProduit = $bdd->query(
+                            "SELECT prod_prix FROM produits
+                            INNER JOIN utilisateurs
+                            ON produits.util_abonnement = utilisateurs.util_abonnement
+                            WHERE prod_nom = '$motifPayement' AND utilisateurs.util_surnom = '$surnom';"
+                        );
+                        $donneesPrixProduit = $reqPrixProduit->fetch();
+                    } 
+                    
                     if(isset($_POST['typePayement'])){
                         $typePayement = $_POST['typePayement'];
                         echo 'Type de payement : '.$typePayement.'<br/>';
@@ -217,7 +221,24 @@ include "connexionBDD.php"
                 </div>
                 </p>
             </form>
-        </div>
+        </div>   
+    <?php
+    }
+    ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       
 
     </div>
 </body>
