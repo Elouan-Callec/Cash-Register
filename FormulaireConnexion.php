@@ -17,7 +17,7 @@ include "connexionBDD.php"
 <?php
 
 if (isset($_GET['util_id'])){
-    $util_id = $_GET['util_id']));
+    $util_id = $_GET['util_id'];
     echo 'utilisateur choisi !';
 }
 else{
@@ -37,7 +37,7 @@ $resultat = $req->fetch();
 
 if(isset($login, $password) AND $login === $resultat['admin_login'] AND $password === $resultat['admin_password']){
     // redirection vers la page principal
-    echo "<meta http-equiv='refresh' content='0;url=index.html'>";
+    echo "<meta http-equiv='refresh' content='0;url=index.php'>";
 }
 else{ 
     // message d'erreur et réaffichage du formulaire
