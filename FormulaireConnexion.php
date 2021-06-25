@@ -28,11 +28,11 @@ if(isset($login) AND isset($password)){
     $req = $bdd->prepare('SELECT admin_login, admin_password, admin_prenom FROM administrateurs WHERE admin_login = :login');
     $req->execute(array(
         'login' => $login));
-    $resultat = $req->fetch();
+    $donnees = $req->fetch();
 }
 
 
-if(isset($login, $password) AND $login === $resultat['admin_login'] AND $password === $resultat['admin_password']){
+if(isset($login, $password) AND $login === $donnees['admin_login'] AND $password === $donnees['admin_password']){
     // redirection vers la page principal
     echo "<meta http-equiv='refresh' content='0; url=index.php'>";
 }
