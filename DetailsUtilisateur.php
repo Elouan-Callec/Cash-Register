@@ -25,7 +25,9 @@ include "connexionBDD.php"
     }
     
     // Récupération des données sur l'utilisateur
-    $req = $bdd->query("SELECT * FROM utilisateurs WHERE util_surnom = '$surnom'");
+    $req = $bdd->prepare("SELECT * FROM utilisateurs WHERE util_surnom = :surnom");
+    $req->execute(array(
+        'surnom' => $surnom));
     $donnees = $req->fetch();
 
     $prenom = $donnees['util_prenom'];
