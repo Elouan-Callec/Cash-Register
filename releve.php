@@ -85,6 +85,9 @@ include "connexionBDD.php"
                         <td><a href="#"><img src="style/img/detailsReleve2.png"></td>
                         <td><a href="#"><img src="style/img/delete.png"></td>
                     </tr>
+                    <?php
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
