@@ -33,7 +33,9 @@ include "connexionBDD.php"
     ?>
 
     <div>
+
         <!-- Partie gauche de la page -->
+        
         <div>
             <form action="AjoutProduit.php?surnom=<?php echo $surnom;?>" method="post">
                 <p>
@@ -161,9 +163,9 @@ include "connexionBDD.php"
 
 
         <!-- Partie droite de la page -->
-        
+
         <?php
-        // Récupération des données du formulaire
+        // Si un motif de payement est entré, le formulaire de droite s'affiche
         if(isset($_POST['motif'])){
         ?>
 
@@ -198,6 +200,7 @@ include "connexionBDD.php"
                     } 
                     echo "</p>";
 
+                    // Récupération du type de payement
                     echo "<p>";
                     if(isset($_POST['typePayement'])){
                         $typePayement = $_POST['typePayement'];
@@ -205,6 +208,7 @@ include "connexionBDD.php"
                     }
                     echo "</p>";
                     
+                    // Récupération du prix du produit
                     echo "<p>";
                     if(isset($donneesPrixProduit)){
                         $prixProduit = $donneesPrixProduit['prod_prix'];
@@ -212,6 +216,7 @@ include "connexionBDD.php"
                     }
                     echo "</p>";
 
+                    // Récupération de la quantité de produit
                     echo "<p>";
                     if(isset($_POST['quantite'])){
                         $quantite = $_POST['quantite'];
@@ -219,6 +224,7 @@ include "connexionBDD.php"
                     }
                     echo "</p>";
 
+                    // Affichage du prix final
                     echo "<p>";
                     if(isset($prixProduit) AND isset($quantite)){
                         $prixFinal = $prixProduit * $quantite;
