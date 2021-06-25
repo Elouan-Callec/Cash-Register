@@ -37,6 +37,9 @@ include "connexionBDD.php"
         <div>
             <form action="AjoutProduit.php?surnom=<?php echo $surnom;?>" method="post">
                 <p>
+                    <h2>Ajout du produit :</h2>
+                </p>
+                <p>
                     <label for="motif">Motif</label>
                     <select name="motif" id="motif" class="case">
                         <optgroup label="Temps">
@@ -167,12 +170,12 @@ include "connexionBDD.php"
         <div action="AjoutProduit.php" method="post">
             <form>
                 <p>
-                    Récapitulatif :</br>
-                    <br/>    
-
+                    <h2>Récapitulatif :</h2>
+                </p>
                     <?php
+                    echo "<p>";
                     $motifPayement = $_POST['motif'];
-                    echo 'Motif de payement : '.$motifPayement.'<br/>';
+                    echo 'Motif de payement : '.$motifPayement;
 
                     // Récupération du prix en fonction du motif de payement
                     if($motifPayement == "1/4h"){
@@ -193,28 +196,41 @@ include "connexionBDD.php"
                         );
                         $donneesPrixProduit = $reqPrixProduit->fetch();
                     } 
-                    
+                    echo "</p>";
+
+                    echo "<p>";
                     if(isset($_POST['typePayement'])){
                         $typePayement = $_POST['typePayement'];
-                        echo 'Type de payement : '.$typePayement.'<br/>';
+                        echo 'Type de payement : '.$typePayement;
                     }
+                    echo "</p>";
                     
+                    echo "<p>";
                     if(isset($donneesPrixProduit)){
                         $prixProduit = $donneesPrixProduit['prod_prix'];
-                        echo "Prix du produit : ".$prixProduit."<br/>";
+                        echo "Prix du produit : ".$prixProduit;
                     }
-                    
+                    echo "</p>";
+
+                    echo "<p>";
                     if(isset($_POST['quantite'])){
                         $quantite = $_POST['quantite'];
-                        echo 'Quantité : '.$quantite.'<br/>';
+                        echo 'Quantité : '.$quantite;
                     }
+                    echo "</p>";
 
+                    echo "<p>";
                     if(isset($prixProduit) AND isset($quantite)){
                         $prixFinal = $prixProduit * $quantite;
-                        echo "Prix total : ".$prixFinal;
-                    }
                     ?>
-                </p>
+                        <label for="prix">
+                            <span>Prix total :</span>
+                        </label>
+                        <input type="number" id="prix" name="prix" value="<?php echo $prixFinal;?>">
+                    <?php
+                    }
+                    echo "</p>";
+                    ?>                
                 <p>
                 <div class="centre">
                     <button type="submit">Valider</button>
