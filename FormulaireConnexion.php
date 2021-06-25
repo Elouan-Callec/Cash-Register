@@ -15,15 +15,13 @@ include "connexionBDD.php"
 <body>
 
 <?php
-
 // récupération du login et password du formulaire
 if(isset($_POST['login'])){
     $login = $_POST['login'];
 }
 if(isset($_POST['password'])){
-    $password =$_POST['password'];
+    $password = $_POST['password'];
 }
-
 
 // requête pour rechercher le login et password de l'admin
 if(isset($login) AND isset($password)){
@@ -32,7 +30,6 @@ if(isset($login) AND isset($password)){
         'login' => $login));
     $resultat = $req->fetch();
 }
-
 
 
 if(isset($login, $password) AND $login === $resultat['admin_login'] AND $password === $resultat['admin_password']){

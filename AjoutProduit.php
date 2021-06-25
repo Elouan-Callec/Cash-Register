@@ -25,7 +25,9 @@ include "connexionBDD.php"
     }
     
     // Récupération du territoire et de l'abonnement de l'utilisateur
-    $req = $bdd->query("SELECT util_territoire, util_abonnement FROM utilisateurs WHERE util_surnom = '$surnom'");
+    $req = $bdd->prepare("SELECT util_territoire, util_abonnement FROM utilisateurs WHERE util_surnom = :surnom");
+    $req->execute(array(
+        'surnom' => $surnom));
     $donnees = $req->fetch();
 
     $territoire = $donnees['util_territoire'];
