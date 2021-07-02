@@ -37,7 +37,12 @@ h1, h2, h3{
 
 /* Tableau */
 
-
+.ajoutUtilisateur{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 80px 40px;
+}
 
 table{
     border-collapse: collapse;
@@ -193,14 +198,12 @@ label span{
 
 .leftUtil{
     float: left;
+    margin: 0 20px 0 0;
 }
 
 .rightUtil{
     float: left;
-}
-
-.centerUtil{
-    float: left;
+    margin: 0 20px;
 }
 
 

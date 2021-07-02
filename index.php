@@ -72,7 +72,7 @@ include "connexionBDD.php"
             </table>
         </div>
 
-        <div>
+        <div class="ajoutUtilisateur">
             <p><a href="AjoutUtilisateur.html"><img src="style/img/userAdd.png"></p>
         </div>
     </div>

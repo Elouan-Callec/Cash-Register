@@ -31,15 +31,12 @@ if(isset($login) AND isset($password)){
     $donnees = $req->fetch();
 }
 
+if (isset($donnees)):
+        if($login === $donnees['admin_login'] AND $password === $donnees['admin_password']) {
+            header('Location:index.php');
+        } else echo 'Mauvais identifiant ou mot de passe !';
+    endif;
 
-if(isset($login, $password) AND $login === $donnees['admin_login'] AND $password === $donnees['admin_password']){
-    // redirection vers la page principal
-    echo "<meta http-equiv='refresh' content='0; url=index.php'>";
-}
-else{ 
-    // message d'erreur et réaffichage du formulaire
-    echo 'Mauvais identifiant ou mot de passe !';
-    
 ?>
 
    <form method="POST" action="FormulaireConnexion.php" class="formConnexion">
@@ -61,11 +58,6 @@ else{
             <button type="submit" class="loginButton">LOGIN</button>
         </div>
     </form>
-
-<?php   
-}
-?>
-
 
 </body>
 

@@ -52,15 +52,15 @@ include "connexionBDD.php"
                 <div class="leftUtil">
                     <p>
                         <label for="surnom">
-                            <span>Surnom</span>
+                            Surnom
                         </label>
                         <input type="text" name="surnom" id="surnom" class="case" value= "<?php echo $surnom;?>"/>
                     </p>
                 </div>
-                <div class="centerUtil">
+                <div class="rightUtil">
                     <p>
                         <label for="nom">
-                            <span>Nom</span>
+                            Nom
                         </label>
                         <input type="text" name="nom" id="nom" class="case" value= "<?php echo $nom;?>">
                     </p>
@@ -68,7 +68,7 @@ include "connexionBDD.php"
                 <div class="rightUtil">
                     <p>
                         <label for="prenom">
-                            <span>Prénom</span>
+                            Prénom
                         </label>
                         <input type="text" name="prenom" id="prenom" class="case" value= "<?php echo $prenom;?>">
                     </p>
@@ -84,7 +84,9 @@ include "connexionBDD.php"
             <h3>Tarifs</h3>
 
             <p>
-                <label for="territoire">Territoire</label>
+                <label for="territoire">
+                    <span>Territoire</span>
+                </label>
                 <select name="territoire" id="territoire" class="case">
                     <option value="HorsPlourin">Hors Plourin</option>
                     <option value="Plourin">Plourin</option>
@@ -94,7 +96,9 @@ include "connexionBDD.php"
                 </select>
             </p>
             <p>
-                <label for="abonnement">Abonnement</label>
+                <label for="abonnement">
+                    <span>Abonnement</span>
+                </label>
                 <select name="abonnement" id="abonnement" class="case">
                     <option value="NonAbonne">Non Abonné</option>
                     <option value="Abonne">Abonné</option>
