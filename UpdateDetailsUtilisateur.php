@@ -44,6 +44,7 @@ include "connexionBDD.php"
 
     <!-- Création du formulaire -->
     <form method="POST" action="ReqUpdateDetailsUtilisateur.php">
+        <input type="hidden" value="<?php echo $donnees['util_id']; ?>"  name="id">
         <h1 class="border">Modification utilisateur</h1>
         <section>
             <h3>Surnom, nom et prénom</h3>
