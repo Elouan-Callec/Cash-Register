@@ -15,7 +15,8 @@ include "connexionBDD.php"
 <body>
 
 <?php
-// récupération du login et password du formulaire
+
+// Récupération du login et password du formulaire
 if(isset($_POST['login'])){
     $login = $_POST['login'];
 }
@@ -23,7 +24,7 @@ if(isset($_POST['password'])){
     $password = $_POST['password'];
 }
 
-// requête pour rechercher le login et password de l'admin
+// Requête pour rechercher le login et password de l'admin
 if(isset($login) AND isset($password)){
     $req = $bdd->prepare('SELECT admin_login, admin_password, admin_prenom FROM administrateurs WHERE admin_login = :login');
     $req->execute(array(
@@ -31,11 +32,13 @@ if(isset($login) AND isset($password)){
     $donnees = $req->fetch();
 }
 
+// Verification du login et du mot de passe
 if (isset($donnees)):
         if($login === $donnees['admin_login'] AND $password === $donnees['admin_password']) {
             header('Location:index.php');
-        } else echo 'Mauvais identifiant ou mot de passe !';
-    endif;
+        }
+        else echo 'Mauvais identifiant ou mot de passe !';
+endif;
 
 ?>
 
