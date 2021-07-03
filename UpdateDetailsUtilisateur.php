@@ -43,7 +43,7 @@ include "connexionBDD.php"
     ?>
 
     <!-- Création du formulaire -->
-    <form method="POST" action="provisoire.php">
+    <form method="POST" action="ReqUpdateDetailsUtilisateur.php">
         <h1 class="border">Modification utilisateur</h1>
         <section>
             <h3>Surnom, nom et prénom</h3>
@@ -141,16 +141,16 @@ include "connexionBDD.php"
             <h3>Coordonées</h3>
 
             <p>
-                <label for="email">
+                <label for="mail">
                     <span>E-mail</span>
                 </label>
-                <input type="email" name="email" id="email" class="case" value= "<?php echo $mail;?>">
+                <input type="mail" name="mail" id="mail" class="case" value= "<?php echo $mail;?>">
             </p>
             <p>
-                <label for="tel">
+                <label for="telephone">
                     <span>Téléphone </span>
                 </label>
-                <input type="tel" name="tel" id="tel" class="case" value= "<?php echo $telephone;?>">
+                <input type="telephone" name="telephone" id="telephone" class="case" value= "<?php echo $telephone;?>">
             </p>
         </section>
 
