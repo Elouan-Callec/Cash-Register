@@ -21,7 +21,7 @@ include "connexionBDD.php"
     }
     // Redirection vers la page principal si non
     else{
-        echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+        header('Location:index.php');
     }
 
     // Récupération des données sur l'utilisateur
