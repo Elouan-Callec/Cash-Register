@@ -21,7 +21,7 @@ include "connexionBDD.php"
     }
     // Redirection vers la page principal si non
     else{
-        echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+        header('Location:index.php');
     }
     
     // Récupération du territoire et de l'abonnement de l'utilisateur
@@ -37,7 +37,7 @@ include "connexionBDD.php"
     <div>
 
         <!-- Partie gauche de la page -->
-        
+
         <div>
             <form action="AjoutProduit.php?surnom=<?php echo $surnom;?>" method="post">
                 <p>
@@ -47,7 +47,7 @@ include "connexionBDD.php"
                     <label for="motif">Motif</label>
                     <select name="motif" id="motif" class="case">
                         <optgroup label="Temps">
-                            <option value="1/4h Plourin">1/4h</option><?php ?>
+                            <option value="1/4h">1/4h</option><?php ?>
                             <option value="1h Jeune">1h Jeune</option>
                         </optgroup>
                         <optgroup label="Copieur">
@@ -171,7 +171,7 @@ include "connexionBDD.php"
         if(isset($_POST['motif'])){
         ?>
 
-        <div action="AjoutProduit.php" method="post">
+        <div action="ReqAjoutProduit.php" method="post">
             <form>
                 <p>
                     <h2>Récapitulatif :</h2>
