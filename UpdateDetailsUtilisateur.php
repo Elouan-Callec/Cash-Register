@@ -89,7 +89,6 @@ include "connexionBDD.php"
                     <span>Territoire</span>
                 </label>
                 <select name="territoire" id="territoire" class="case">
-                    <option value="HorsPlourin">Hors Plourin</option>
                     <option value="Plourin">Plourin</option>
                     <option value="HorsCCPI">Hors CCPI</option>
                     <option value="CCPI">CCPI</option>
