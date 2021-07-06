@@ -50,7 +50,7 @@ include "connexionBDD.php"
     <?php
     include "NavBar.html";
     ?>
-    
+
     <!-- Création du tableau -->
     <div>
         <div>
@@ -58,11 +58,14 @@ include "connexionBDD.php"
                 <caption class="captionDU">
                     <div class="global">
                         <div>
-                            <p class="left"><?php echo $surnom; ?></p>
+                            <p class="left">
+                                <?php echo $surnom; ?>
+                            </p>
                         </div>
                         <div>
                             <!-- Envoie du surnom de l'utilisateur choisi à la page UpdateDetailsUtilisateur -->
-                            <a href="UpdateDetailsUtilisateur.php?surnom=<?php echo $surnom;?>" class="right"><img src="style/img/update.png" class="imgCaptionDU"></a>
+                            <a href="UpdateDetailsUtilisateur.php?surnom=<?php echo $surnom;?>" class="right"><img
+                                    src="style/img/update.png" class="imgCaptionDU"></a>
                         </div>
                     </div>
                 </caption>
@@ -70,45 +73,65 @@ include "connexionBDD.php"
                 <tbody>
                     <tr>
                         <td class="fontDU">Prénom</td>
-                        <td><?php echo $prenom; ?></td>
+                        <td>
+                            <?php echo $prenom; ?>
+                        </td>
                     </tr>
                     <tr>
                         <td class="fontDU">Nom</td>
-                        <td><?php echo $nom;?></td>
+                        <td>
+                            <?php echo $nom;?>
+                        </td>
                     </tr>
                     <tr>
                         <td class="fontDU">Rue</td>
-                        <td><?php echo $rue;?></td>
+                        <td>
+                            <?php echo $rue;?>
+                        </td>
                     </tr>
                     <tr>
                         <td class="fontDU">Code postal</td>
-                        <td><?php echo $codePostal;?></td>
+                        <td>
+                            <?php echo $codePostal;?>
+                        </td>
                     </tr>
                     <tr>
                         <td class="fontDU">Ville</td>
-                        <td><?php echo $ville;?></td>
+                        <td>
+                            <?php echo $ville;?>
+                        </td>
                     </tr>
                     <tr>
                         <td class="fontDU">E-mail</td>
-                        <td><?php echo $mail;?></td>
+                        <td>
+                            <?php echo $mail;?>
+                        </td>
                     </tr>
                     <tr>
                         <td class="fontDU">Téléphone</td>
-                        <td><?php echo $telephone;?></td>
+                        <td>
+                            <?php echo $telephone;?>
+                        </td>
                     </tr>
                     <tr>
                         <td class="fontDU">Territoire</td>
-                        <td><?php echo $territoire;?></td>
+                        <td>
+                            <?php echo $territoire;?>
+                        </td>
                     </tr>
                     <tr>
                         <td class="fontDU">Abonnement</td>
-                        <td><?php echo $abonnement;?></td>
+                        <td>
+                            <?php echo $abonnement;?>
+                        </td>
                     </tr>
                     <tr>
                         <td class="fontDU">Solde</td>
-                        <td><?php echo $solde;?></td>
+                        <td>
+                            <?php echo $solde;?>
+                        </td>
                     </tr>
-                    
+
                     <tr>
                         <td class="fontDU">Historique des actions</td>
                         <td><a href="#"><img src="style/img/historique.png" class="imgTabDU"></td>

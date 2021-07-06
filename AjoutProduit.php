@@ -41,13 +41,14 @@ include "connexionBDD.php"
         <div>
             <form action="AjoutProduit.php?surnom=<?php echo $surnom;?>" method="post">
                 <p>
-                    <h2>Ajout du produit :</h2>
+                <h2>Ajout du produit :</h2>
                 </p>
                 <p>
                     <label for="motif">Motif</label>
                     <select name="motif" id="motif" class="case">
                         <optgroup label="Temps">
-                            <option value="1/4h">1/4h</option><?php ?>
+                            <option value="1/4h">1/4h</option>
+                            <?php ?>
                             <option value="1h Jeune">1h Jeune</option>
                         </optgroup>
                         <optgroup label="Copieur">
@@ -74,7 +75,8 @@ include "connexionBDD.php"
                         <optgroup label="Cycles">
                             <option value="Cycle initiation Plourin">Cycle initiation Plourin</option>
                             <option value="Cycle Hors Plourin">Cycle Hors Plourin</option>
-                            <option value="Cycle perfectionnement Hors Plourin">Cycle perfectionnement Hors Plourin</option>
+                            <option value="Cycle perfectionnement Hors Plourin">Cycle perfectionnement Hors Plourin
+                            </option>
                             <option value="Cycle perfectionnement Plourin">Cycle perfectionnement Plourin</option>
                         </optgroup>
                         <optgroup label="Adhésion Clubs">
@@ -174,9 +176,9 @@ include "connexionBDD.php"
         <div action="ReqAjoutProduit.php" method="post">
             <form>
                 <p>
-                    <h2>Récapitulatif :</h2>
+                <h2>Récapitulatif :</h2>
                 </p>
-                    <?php
+                <?php
                     echo "<p>";
                     $motifPayement = $_POST['motif'];
                     echo 'Motif de payement : '.$motifPayement;
@@ -231,22 +233,22 @@ include "connexionBDD.php"
                     if(isset($prixProduit) AND isset($quantite)){
                         $prixFinal = $prixProduit * $quantite;
                     ?>
-                        <label for="prix">
-                            <span>Prix total :</span>
-                        </label>
-                        <input type="number" id="prix" name="prix" value="<?php echo $prixFinal;?>">
-                    <?php
+                <label for="prix">
+                    <span>Prix total :</span>
+                </label>
+                <input type="number" id="prix" name="prix" value="<?php echo $prixFinal;?>">
+                <?php
                     }
                     echo "</p>";
-                    ?>                
+                    ?>
                 <p>
                 <div class="centre">
                     <button type="submit">Valider</button>
                 </div>
                 </p>
             </form>
-        </div>   
-    <?php
+        </div>
+        <?php
     }
     ?>
 
@@ -262,7 +264,7 @@ include "connexionBDD.php"
 
 
 
-                       
+
 
     </div>
 </body>

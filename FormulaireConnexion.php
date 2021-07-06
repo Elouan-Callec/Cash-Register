@@ -42,7 +42,7 @@ endif;
 
 ?>
 
-   <form method="POST" action="FormulaireConnexion.php" class="smallForm">
+    <form method="POST" action="FormulaireConnexion.php" class="smallForm">
         <p class="titre">Login</p>
         <div class="centre">
             <p>
@@ -65,7 +65,3 @@ endif;
 </body>
 
 </html>
-
-
-
- 

@@ -44,7 +44,7 @@ include "connexionBDD.php"
 
     <!-- Création du formulaire -->
     <form method="POST" action="ReqUpdateDetailsUtilisateur.php">
-        <input type="hidden" value="<?php echo $donnees['util_id']; ?>"  name="id">
+        <input type="hidden" value="<?php echo $donnees['util_id']; ?>" name="id">
         <h1 class="border">Modification utilisateur</h1>
         <section>
             <h3>Surnom, nom et prénom</h3>
@@ -55,7 +55,7 @@ include "connexionBDD.php"
                         <label for="surnom">
                             Surnom
                         </label>
-                        <input type="text" name="surnom" id="surnom" class="case" value= "<?php echo $surnom;?>"/>
+                        <input type="text" name="surnom" id="surnom" class="case" value="<?php echo $surnom;?>" />
                     </p>
                 </div>
                 <div class="rightUtil">
@@ -63,7 +63,7 @@ include "connexionBDD.php"
                         <label for="nom">
                             Nom
                         </label>
-                        <input type="text" name="nom" id="nom" class="case" value= "<?php echo $nom;?>">
+                        <input type="text" name="nom" id="nom" class="case" value="<?php echo $nom;?>">
                     </p>
                 </div>
                 <div class="rightUtil">
@@ -71,7 +71,7 @@ include "connexionBDD.php"
                         <label for="prenom">
                             Prénom
                         </label>
-                        <input type="text" name="prenom" id="prenom" class="case" value= "<?php echo $prenom;?>">
+                        <input type="text" name="prenom" id="prenom" class="case" value="<?php echo $prenom;?>">
                     </p>
                 </div>
             </div>
@@ -107,7 +107,7 @@ include "connexionBDD.php"
             <label for="solde">
                 <span>Solde</span>
             </label>
-            <input type="number" name="solde" id="solde" class="case" value= "<?php echo $solde;?>">
+            <input type="number" name="solde" id="solde" class="case" value="<?php echo $solde;?>">
         </section>
 
         <br />
@@ -119,19 +119,19 @@ include "connexionBDD.php"
                 <label for="rue">
                     <span>Rue</span>
                 </label>
-                <input type="text" name="rue" id="rue" class="case" value= "<?php echo $rue;?>">
+                <input type="text" name="rue" id="rue" class="case" value="<?php echo $rue;?>">
             </p>
             <p>
                 <label for="cp">
                     <span>Code postal</span>
                 </label>
-                <input type="number" name="cp" id="cp" class="case" value= "<?php echo $codePostal;?>">
+                <input type="number" name="cp" id="cp" class="case" value="<?php echo $codePostal;?>">
             </p>
             <p>
                 <label for="ville">
                     <span>Ville</span>
                 </label>
-                <input type="text" name="ville" id="ville" class="case" value= "<?php echo $ville;?>">
+                <input type="text" name="ville" id="ville" class="case" value="<?php echo $ville;?>">
             </p>
         </section>
 
@@ -144,13 +144,13 @@ include "connexionBDD.php"
                 <label for="mail">
                     <span>E-mail</span>
                 </label>
-                <input type="mail" name="mail" id="mail" class="case" value= "<?php echo $mail;?>">
+                <input type="mail" name="mail" id="mail" class="case" value="<?php echo $mail;?>">
             </p>
             <p>
                 <label for="telephone">
                     <span>Téléphone </span>
                 </label>
-                <input type="telephone" name="telephone" id="telephone" class="case" value= "<?php echo $telephone;?>">
+                <input type="telephone" name="telephone" id="telephone" class="case" value="<?php echo $telephone;?>">
             </p>
         </section>
 
