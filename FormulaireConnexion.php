@@ -42,7 +42,7 @@ endif;
 
 ?>
 
-   <form method="POST" action="FormulaireConnexion.php" class="formConnexion">
+   <form method="POST" action="FormulaireConnexion.php" class="smallForm">
         <p class="titre">Login</p>
         <div class="centre">
             <p>
