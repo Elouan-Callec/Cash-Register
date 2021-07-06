@@ -69,7 +69,7 @@ include "connexionBDD.php"
                                     src="style/img/detailsUser.png"></td>
                         <td><a href="AjoutProduit.php?surnom=<?php echo $surnomUtilisateur;?>"><img
                                     src="style/img/addProduit.png"></td>
-                        <td><a href="AjoutCrédits.html"><img src="style/img/addCredits.png"></td>
+                        <td><a href="AjoutCrédits.html?surnom=<?php echo $surnomUtilisateur;?>"><img src="style/img/addCredits.png"></td>
                     </tr>
                     <?php
                       }
