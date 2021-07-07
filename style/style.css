@@ -211,8 +211,9 @@ label span{
 
 
 .titre{
+    /* border: 1px solid; */
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .smallForm{

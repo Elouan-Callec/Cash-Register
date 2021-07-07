@@ -35,7 +35,9 @@ include "connexionBDD.php"
 
     <div>
         <form method="POST" action="provisoire.php" class="smallForm">
-            <p class="titre">Ajout de crédits</p>
+            <div class="titre">
+                <p class="border">Ajout de crédits</p>
+            </div>
             <div class="centre">
                 <p><h3>Solde actuel : <?php echo $solde.'€';?></h3></p>
             </div>
