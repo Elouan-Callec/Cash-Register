@@ -14,9 +14,31 @@ include "connexionBDD.php"
 
 <body>
 
+    <?php
+    // Verrifie si on récupère bien le surnom
+    if(isset($_GET['surnom'])){
+        $surnom = $_GET['surnom'];
+    }
+    // Redirection vers la page principal si non
+    else{
+        header('Location:index.php');
+    }
+
+    // Récupération du solde de l'utilisateur
+    $req = $bdd->prepare("SELECT util_solde FROM utilisateurs WHERE util_surnom = :surnom");
+    $req->execute(array(
+        'surnom' => $surnom));
+    $donnees = $req->fetch();
+
+    $solde = $donnees['util_solde'];
+    ?>
+
     <div>
         <form method="POST" action="provisoire.php" class="smallForm">
             <p class="titre">Ajout de crédits</p>
+            <div class="centre">
+                <p><h3>Solde actuel : <?php echo $solde.'€';?></h3></p>
+            </div>
             <div class="centre">
                 <p>
                     <label for="prix">
