@@ -17,6 +17,13 @@ include "connexionBDD.php"
         <p class="HP">Informations utilisateur</p>
     </div>
 
+    <div class="recherche">
+        <span class="text">Surnom de l'utilisateur</span>
+        <form method="POST" action="provisoire.php" id="recherche">
+                <input type="search" class="champ" placeholder="Ex : a.aldain">
+                <button type="submit" class="bouton">
+        </form>
+    </div>
     <!-- Ajout de la barre de navigation -->
     <?php
     include "NavBar.html";

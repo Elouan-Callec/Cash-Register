@@ -153,7 +153,7 @@ tr:nth-child(2n){
 
 
 
-form{
+form:not(#recherche){
     margin: 5% auto;
     width: 850px;
     padding: 1em;
@@ -399,4 +399,40 @@ input[type=password]{
 .navBar .deconnexion span{
     background-color:#cb4335;
     color:#641e16;
+}
+
+
+
+/* Barre de recherche */
+
+
+
+.recherche{
+    /* border: 1px solid red; */
+    position:relative;
+    width:640px;
+    margin: 20px auto 100px auto;
+    height:auto;
+    
+}
+
+.recherche .text{
+    font-size: 20px;
+    font-weight: bold;
+    width:300px;
+    float:left;    
+}
+
+.recherche .champ{
+    width:600px;
+    height:35px;
+    float:left;
+}
+
+.recherche .bouton{
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border:none;
+    float:left;
 }
