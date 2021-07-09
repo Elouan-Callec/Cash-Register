@@ -1,6 +1,6 @@
 <!-- Connexion a la base de donnees -->
 <?php
-include "connexionBDD.php"
+include "connexionBDD.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,8 +19,8 @@ include "connexionBDD.php"
 
     <div class="recherche">
         <span class="text">Surnom de l'utilisateur</span>
-        <form method="POST" action="provisoire.php" id="recherche">
-                <input type="search" class="champ" placeholder="Ex : a.aldain">
+        <form method="POST" action="ReqBarreRecherche.php" id="recherche">
+                <input type="search" class="champ" name="surnom" id="surnom" placeholder="Ex : a.aldain">
                 <button type="submit" class="bouton">
         </form>
     </div>
