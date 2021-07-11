@@ -19,9 +19,9 @@ include "connexionBDD.php";
 
     <div class="recherche">
         <span class="text">Surnom de l'utilisateur</span>
-        <form method="POST" action="ReqBarreRecherche.php" id="recherche">
+        <form method="POST" action="ReqRechercheUtilisateur.php" id="recherche">
                 <input type="search" class="champ" name="surnom" id="surnom" placeholder="Ex : a.aldain">
-                <button type="submit" class="bouton">
+                <button type="submit" class="bouton">Rechercher</button>
         </form>
     </div>
     <!-- Ajout de la barre de navigation -->
