@@ -41,16 +41,19 @@ include "connexionBDD.php"
                 <p class="border">Ajout de crédits</p>
             </div>
             <div class="centre">
-                <p><h3>Solde actuel : <?php echo $solde.'€';?></h3></p>
+                <p><h3>Solde actuel de <span class="voyant"><?php echo $surnom;?></span> : <?php echo $solde.'€';?></h3></p>
             </div>
             <div class="centre">
-                <p>Vous aller créditer de <?php echo $_POST['prix'];?>€</p>
-                <p>Voulez-vous confirmer ?</p>
+                <p>Vous aller créditer ce compte de <span class="voyant"><?php echo $_POST['prix'];?>€</p>
+                
             </div>
+            <div class="centre">
+            <p>Voulez-vous confirmer ?</p>
                 <p>
-                <div class="centre">Confirmer</button>
-                </div>
+                    <button type="submit">Confirmer</button>
                 </p>
+            </div>
+            </p>
         </form>
     </div>
 
@@ -60,9 +63,8 @@ include "connexionBDD.php"
     ?>
     
     <div>
-        <form method="POST" action="AjoutCredits.php" class="smallForm">
-            <!-- Pas sur de la méthode -->
-            <input type="hidden" value="<?php echo $surnom; ?>" name="surnom">
+        <form method="POST" action="AjoutCredits.php?surnom=<?php echo $surnom;?>" class="smallForm">
+            <!-- <input type="hidden" value="<?php echo $surnom; ?>" name="surnom"> -->
             <div class="titre">
                 <p class="border">Ajout de crédits</p>
             </div>
@@ -77,11 +79,11 @@ include "connexionBDD.php"
                     <input type="number" id="prix" name="prix" value="1">
                 </p>
             </div>
-                <p>
+            <p>
                 <div class="centre">
                     <button type="submit">Ajouter</button>
                 </div>
-                </p>
+            </p>
         </form>
     </div>
 
