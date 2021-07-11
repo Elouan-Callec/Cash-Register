@@ -443,3 +443,8 @@ input[type=password]{
     font: bold 12px Arial, Helvetica;
     color: #fff;
 }
+
+.voyant{
+    color: red;
+    font-weight: bold;
+}
