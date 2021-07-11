@@ -408,12 +408,10 @@ input[type=password]{
 
 
 .recherche{
-    /* border: 1px solid red; */
     position:relative;
-    width:640px;
+    width:700px;
     margin: 20px auto 100px auto;
-    height:auto;
-    
+    height:60px;    
 }
 
 .recherche .text{
@@ -424,15 +422,24 @@ input[type=password]{
 }
 
 .recherche .champ{
+    background: url('img/recherche.png') no-repeat 10px 9px #fff;
+    border-width: 1px;
+    border-style: solid;
     width:600px;
     height:35px;
     float:left;
+    padding: 10px 15px 8px 35px;
 }
 
 .recherche .bouton{
-    width: 35px;
+    background: #6A6F75;
     height: 35px;
+    width: 75px;
     padding: 0;
+    margin: 0 3px;
     border:none;
     float:left;
+    cursor: pointer;
+    font: bold 12px Arial, Helvetica;
+    color: #fff;
 }
