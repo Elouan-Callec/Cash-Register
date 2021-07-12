@@ -46,8 +46,10 @@ include "connexionBDD.php"
                 <p><h3>Solde actuel de <span class="voyant"><?php echo $surnom;?></span> : <?php echo $solde.'€';?></h3></p>
             </div>
             <div class="centre">
-                <p>Vous aller créditer ce compte de <span class="voyant"><?php echo $_POST['prix'];?>€</p>
-                
+                <p>Vous aller créditer ce compte de <span class="voyant"><?php echo $_POST['prix'];?>€</p>         
+            </div>
+            <div class="centre">
+                <p>L'utilisateur paye en <span class="voyant"><?php echo $_POST['typePayement'];?></p>
             </div>
             <div class="centre">
             <p>Voulez-vous confirmer ?</p>
@@ -71,16 +73,28 @@ include "connexionBDD.php"
                 <p class="border">Ajout de crédits</p>
             </div>
             <div class="centre">
-                <p><h3>Solde actuel : <?php echo $solde.'€';?></h3></p>
+            <p><h3>Solde actuel de <span class="voyant"><?php echo $surnom;?></span> : <?php echo $solde.'€';?></h3></p>
             </div>
             <div class="centre">
                 <p>
                     <label for="prix">
                         <span>Prix :</span>
                     </label>
-                    <input type="number" id="prix" name="prix" value="1">
+                    <input type="number" step="0.01" id="prix" name="prix" value="1">
                 </p>
             </div>
+            <div class="centre">
+                <h3>Type de payement :</h3>
+                <input type="radio" name="typePayement" value="Chèque" id="cheque"><label
+                    for="cheque">Chèque</label><br />
+                <input type="radio" name="typePayement" value="Chèque APTIC" id="chequeAPTIC"><label
+                    for="chequeAPTIC">Chèque APTIC</label><br />
+                <input type="radio" name="typePayement" value="Espèce" id="espece"><label
+                    for="espece">Espèce</label><br />
+                <input type="radio" name="typePayement" value="Solde compte" id="soldeCompte"><label
+                    for="soldeCompte">Solde compte</label>
+            </div>
+            <br/>
             <p>
                 <div class="centre">
                     <button type="submit">Ajouter</button>
