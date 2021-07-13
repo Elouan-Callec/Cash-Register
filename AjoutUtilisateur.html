@@ -8,8 +8,12 @@
 </head>
 
 <body>
-    <form method="POST" action="provisoire.php">
-        <h1 class="border">Nouvel utilisateur</h1>
+    <!-- Création du formulaire -->
+    <form method="POST" action="ReqUpdateDetailsUtilisateur.php">
+        <input type="hidden" value="<?php echo $donnees['util_id']; ?>" name="id">
+        <div class="titre">
+            <p class="border">Modification utilisateur</p>
+        </div>
         <section>
             <h3>Surnom, nom et prénom</h3>
 
@@ -17,25 +21,25 @@
                 <div class="leftUtil">
                     <p>
                         <label for="surnom">
-                            <span>Surnom</span>
+                            Surnom
                         </label>
-                        <input type="text" name="surnom" id="surnom" class="case" />
+                        <input type="text" name="surnom" id="surnom" class="case" value="<?php echo $surnom;?>" />
                     </p>
                 </div>
-                <div class="centerUtil">
+                <div class="rightUtil">
                     <p>
                         <label for="nom">
-                            <span>Nom</span>
+                            Nom
                         </label>
-                        <input type="text" name="nom" id="nom" class="case">
+                        <input type="text" name="nom" id="nom" class="case" value="<?php echo $nom;?>">
                     </p>
                 </div>
                 <div class="rightUtil">
                     <p>
                         <label for="prenom">
-                            <span>Prénom</span>
+                            Prénom
                         </label>
-                        <input type="text" name="prenom" id="prenom" class="case">
+                        <input type="text" name="prenom" id="prenom" class="case" value="<?php echo $prenom;?>">
                     </p>
                 </div>
             </div>
@@ -49,9 +53,10 @@
             <h3>Tarifs</h3>
 
             <p>
-                <label for="territoire">Territoire</label>
+                <label for="territoire">
+                    <span>Territoire</span>
+                </label>
                 <select name="territoire" id="territoire" class="case">
-                    <option value="HorsPlourin">Hors Plourin</option>
                     <option value="Plourin">Plourin</option>
                     <option value="HorsCCPI">Hors CCPI</option>
                     <option value="CCPI">CCPI</option>
@@ -59,7 +64,9 @@
                 </select>
             </p>
             <p>
-                <label for="abonnement">Abonnement</label>
+                <label for="abonnement">
+                    <span>Abonnement</span>
+                </label>
                 <select name="abonnement" id="abonnement" class="case">
                     <option value="NonAbonne">Non Abonné</option>
                     <option value="Abonne">Abonné</option>
@@ -68,7 +75,7 @@
             <label for="solde">
                 <span>Solde</span>
             </label>
-            <input type="number" name="solde" id="solde" class="case">
+            <input type="number" name="solde" id="solde" class="case" value="<?php echo $solde;?>">
         </section>
 
         <br />
@@ -80,19 +87,19 @@
                 <label for="rue">
                     <span>Rue</span>
                 </label>
-                <input type="text" name="rue" id="rue" class="case">
+                <input type="text" name="rue" id="rue" class="case" value="<?php echo $rue;?>">
             </p>
             <p>
                 <label for="cp">
                     <span>Code postal</span>
                 </label>
-                <input type="number" name="cp" id="cp" class="case">
+                <input type="number" name="cp" id="cp" class="case" value="<?php echo $codePostal;?>">
             </p>
             <p>
                 <label for="ville">
                     <span>Ville</span>
                 </label>
-                <input type="text" name="ville" id="ville" class="case">
+                <input type="text" name="ville" id="ville" class="case" value="<?php echo $ville;?>">
             </p>
         </section>
 
@@ -102,16 +109,16 @@
             <h3>Coordonées</h3>
 
             <p>
-                <label for="email">
+                <label for="mail">
                     <span>E-mail</span>
                 </label>
-                <input type="email" name="email" id="email" class="case">
+                <input type="mail" name="mail" id="mail" class="case" value="<?php echo $mail;?>">
             </p>
             <p>
-                <label for="tel">
+                <label for="telephone">
                     <span>Téléphone </span>
                 </label>
-                <input type="tel" name="tel" id="tel" class="case">
+                <input type="telephone" name="telephone" id="telephone" class="case" value="<?php echo $telephone;?>">
             </p>
         </section>
 
