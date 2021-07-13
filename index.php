@@ -86,7 +86,7 @@ include "connexionBDD.php";
         </div>
 
         <div class="ajoutUtilisateur">
-            <p><a href="AjoutUtilisateur.html"><img src="style/img/userAdd.png"></p>
+            <p><a href="AjoutUtilisateur.php"><img src="style/img/userAdd.png"></p>
         </div>
     </div>
 </body>
