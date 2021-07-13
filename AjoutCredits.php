@@ -39,6 +39,7 @@ include "connexionBDD.php"
         <form method="POST" action="ReqAjoutCredits.php" class="smallForm">
             <input type="hidden" value="<?php echo $_POST['prix']; ?>" name="prix">
             <input type="hidden" value="<?php echo $surnom; ?>" name="surnom">
+            <input type="hidden" value="<?php echo $_POST['typePayement']; ?>" name="typePayement">
             <div class="titre">
                 <p class="border">Ajout de crédits</p>
             </div>
