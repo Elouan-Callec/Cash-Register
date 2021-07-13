@@ -92,8 +92,6 @@ include "connexionBDD.php"
                     for="chequeAPTIC">Chèque APTIC</label><br />
                 <input type="radio" name="typePayement" value="Espèce" id="espece"><label
                     for="espece">Espèce</label><br />
-                <input type="radio" name="typePayement" value="Solde compte" id="soldeCompte"><label
-                    for="soldeCompte">Solde compte</label>
             </div>
             <br/>
             <p>
