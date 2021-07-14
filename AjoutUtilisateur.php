@@ -14,8 +14,7 @@ include "connexionBDD.php"
 
 <body>
     <!-- Création du formulaire -->
-    <form method="POST" action="ReqUpdateDetailsUtilisateur.php">
-        <input type="hidden" value="<?php echo $donnees['util_id']; ?>" name="id">
+    <form method="POST" action="ReqAjoutUtilisateur.php">
         <div class="titre">
             <p class="border">Modification utilisateur</p>
         </div>
@@ -80,7 +79,7 @@ include "connexionBDD.php"
             <label for="solde">
                 <span>Solde</span>
             </label>
-            <input type="number" name="solde" id="solde" class="case"/>
+            <input type="number" step="0.01" name="solde" id="solde" class="case"/>
         </section>
 
         <br />
