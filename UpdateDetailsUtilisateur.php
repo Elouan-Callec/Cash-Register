@@ -109,7 +109,7 @@ include "connexionBDD.php"
             <label for="solde">
                 <span>Solde</span>
             </label>
-            <input type="number" name="solde" id="solde" class="case" value="<?php echo $solde;?>">
+            <input type="number" step='0.01' name="solde" id="solde" class="case" value="<?php echo $solde;?>">
         </section>
 
         <br />
