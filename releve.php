@@ -47,41 +47,17 @@ include "connexionBDD.php"
                 <tbody>
                     <?php
                     // Récupération des données dans la BDD
-                    $req = $bdd->query('SELECT util_id, util_surnom, util_solde FROM utilisateurs ORDER BY util_surnom');
+                    $req = $bdd->query('SELECT relev_id, relev_date FROM releves ORDER BY relev_id DESC');
 
                     while($donnees = $req->fetch()){
                     ?>
                     <tr>
-                        <td>6</td>
-                        <td>09/06/2021 15:42</td>
-                        <td><a href="#"><img src="style/img/detailsReleve2.png"></td>
-                        <td><a href="#"><img src="style/img/delete.png"></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>date</td>
-                        <td><a href="#"><img src="style/img/detailsReleve2.png"></td>
-                        <td><a href="#"><img src="style/img/delete.png"></td>
-                    <tr>
-                        <td>4</td>
-                        <td>date</td>
-                        <td><a href="#"><img src="style/img/detailsReleve2.png"></td>
-                        <td><a href="#"><img src="style/img/delete.png"></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>date</td>
-                        <td><a href="#"><img src="style/img/detailsReleve2.png"></td>
-                        <td><a href="#"><img src="style/img/delete.png"></td>
-                    <tr>
-                        <td>2</td>
-                        <td>date</td>
-                        <td><a href="#"><img src="style/img/detailsReleve2.png"></td>
-                        <td><a href="#"><img src="style/img/delete.png"></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>date</td>
+                        <td>
+                            <?php echo $donnees['relev_id']; ?>
+                        </td>
+                        <td>
+                            <?php echo $donnees['relev_date']; ?>
+                        </td>
                         <td><a href="#"><img src="style/img/detailsReleve2.png"></td>
                         <td><a href="#"><img src="style/img/delete.png"></td>
                     </tr>
