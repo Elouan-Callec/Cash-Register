@@ -58,7 +58,6 @@ include "connexionBDD.php"
                     <button type="submit">Confirmer</button>
                 </p>
             </div>
-            </p>
         </form>
     </div>
 
