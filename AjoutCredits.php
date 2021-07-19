@@ -47,7 +47,7 @@ include "connexionBDD.php"
                 <p><h3>Solde actuel de <span class="voyant"><?php echo $surnom;?></span> : <?php echo $solde.'€';?></h3></p>
             </div>
             <div class="centre">
-                <p>Vous aller créditer ce compte de <span class="voyant"><?php echo $_POST['prix'];?>€</p>         
+                <p>Vous allez créditer ce compte de <span class="voyant"><?php echo $_POST['prix'];?>€</p>         
             </div>
             <div class="centre">
                 <p>L'utilisateur paye en <span class="voyant"><?php echo $_POST['typePayement'];?></p>
