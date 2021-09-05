@@ -216,7 +216,7 @@ include "connexionBDD.php"
                     echo "<p>";
                     if(isset($donneesPrixProduit)){
                         $prixProduit = $donneesPrixProduit['prod_prix'];
-                        echo "Prix du produit : ".$prixProduit;
+                        echo "Prix du produit : ".$prixProduit."€";
                     }
                     echo "</p>";
 
