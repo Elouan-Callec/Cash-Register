@@ -58,7 +58,7 @@ include "connexionBDD.php"
                         <td>
                             <?php echo $donnees['relev_date']; ?>
                         </td>
-                        <td><a href="#"><img src="style/img/detailsReleve2.png"></td>
+                        <td><a href="DetailsReleve.php?relev_id=<?php echo $donnees['relev_id'];?>"><img src="style/img/detailsReleve2.png"></td>
                         <td><a href="ReqDeleteReleve.php?relev_id=<?php echo $donnees['relev_id'];?>"><img src="style/img/delete.png"></td>
                     </tr>
                     <?php

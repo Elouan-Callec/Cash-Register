@@ -448,3 +448,35 @@ input[type=password]{
     color: red;
     font-weight: bold;
 }
+
+
+
+/* Details Relevé */
+
+
+
+/* Haut de page */
+
+.HPreleve, .MPreleve{
+    margin: 50px auto;
+    font-size: 18px;
+    color: black;
+    padding: 1px;
+}
+
+.HPreleve{
+    border-top: 1px solid black;
+    border-top-width: 2px;
+    border-bottom: 1px solid black;
+    border-bottom-width: 2px;
+}
+
+.BPreleve{
+    border-top: 1px solid black;
+    border-top-width: 2px;
+    padding: 50px 270px;
+    font-size: 18px;
+    color: black;
+    margin: 1px 1px;
+    text-align: center;
+}
