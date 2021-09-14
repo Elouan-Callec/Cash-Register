@@ -63,7 +63,7 @@ include "connexionBDD.php"
     <div class="MPreleve">
         <span>Motif : <?php echo $donnees3['prod_nom']; ?></span><br/>
         <span>Prix motif : <?php echo $donnees3['prod_prix']; ?></span><br/>
-        <span>Quantité : </span><br/>
+        <span>Quantité : <?php echo $donnees['prod_quantite'];?></span><br/>
         <span>Type de payement : <?php echo $donnees['relev_typepayement']; ?></span>
     </div>        
     <div class="MPreleve">
